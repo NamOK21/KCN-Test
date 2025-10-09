@@ -1,14 +1,6 @@
 import React from "react";
 
-const LandingPage: React.FC = () => {
-    const menuItems = [
-        "Giới thiệu",
-        "Tin tức sự kiện",
-        "Dự án",
-        "Pháp lý và Chính sách ưu đãi",
-        "Hỗ trợ",
-    ];
-
+const Homepage: React.FC = () => {
     const searchTags = [
         { img: "chungcu.png", label: "Chung cư" },
         { img: "khucongnghiep.png", label: "Khu công nghiệp" },
@@ -57,80 +49,17 @@ const LandingPage: React.FC = () => {
         },
     ];
 
-    const infraList = [
-        {
-            img: "/images/electric.png",
-            tag: "Điện",
-            title: "Hệ thống điện ổn định",
-            text: "Đảm bảo nguồn điện liên tục, an toàn và đáp ứng nhu cầu sản xuất – kinh doanh.",
-        },
-        {
-            img: "/images/water.png",
-            tag: "Nước",
-            title: "Hệ thống cấp nước hiện đại",
-            text: "Cung cấp nước sạch đạt chuẩn, vận hành thông minh và tiết kiệm.",
-        },
-        {
-            img: "/images/telecom.png",
-            tag: "Viễn thông",
-            title: "Hạ tầng viễn thông tiên tiến",
-            text: "Mạng lưới kết nối tốc độ cao, ổn định, hỗ trợ toàn diện cho công nghệ và dịch vụ số.",
-        },
-    ];
-
 
     return (
         <>
-            {/* Homepage */}
-            <header className="absolute top-0 left-0 w-full h-[82px] flex items-center z-50 px-10 md:px-20 transition-all duration-300 bg-transparent">
-                <nav className="w-full flex items-center justify-between">
-                    {/* Logo */}
-                    <div className="flex items-center">
-                        <a href="/">
-                            <img src="/images/logo.png" alt="Logo" className="max-h-12 object-contain" />
-                        </a>
-                    </div>
-
-                    {/* Menu giữa */}
-                    <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-6">
-                        {menuItems.map((item) => (
-                            <a key={item} href="#" className="text-white font-medium hover:text-blue-500 transition-colors">
-                                {item}
-                            </a>
-                        ))}
-                    </div>
-
-                    {/* Bên phải */}
-                    <div className="flex items-center gap-5">
-                        <img src="/images/call.png" alt="Call" className="max-h-6 object-contain" />
-                        <span className="text-white font-bold text-[15px]">+84 090 0238888</span>
-
-                        <button
-                            id="lang-toggle"
-                            className="flex items-center justify-center w-10 h-10 border border-white rounded-full text-white font-bold hover:bg-white/20 transition transform hover:scale-110"
-                            data-lang="vi"
-                        >
-                            VN
-                        </button>
-
-                        <a
-                            href="#"
-                            className="flex items-center justify-center w-10 h-10 border border-white rounded-full hover:bg-white/20 transition transform hover:scale-110"
-                        >
-                            <img src="/images/account.png" alt="Login" className="w-5 h-auto" />
-                        </a>
-                    </div>
-                </nav>
-            </header>
-
             {/* Hero */}
             <section className="relative bg-cover bg-center min-h-screen" style={{ backgroundImage: "url('/images/background.png')" }}>
                 <div className="absolute inset-0 bg-black/45"></div>
-                <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-20">
+                <div className="relative z-10 pt-[138px] flex flex-col items-center justify-center text-center px-4 py-20">
                     <button className="mb-5 px-4 py-2 rounded-full bg-blue-800 text-white text-xs font-medium">
                         Dự án tiêu biểu
                     </button>
-                    <h1 className="text-white font-bold text-5xl md:text-6xl mb-5 leading-tight">
+                    <h1 className="text-white font-bold text-5xl pt-10 md:text-6xl mb-5 max-w-[780px] leading-tight">
                         Khám phá cơ hội đầu tư tại khu công nghiệp
                     </h1>
                     <p className="text-white text-lg md:text-xl mb-8 max-w-2xl">
@@ -145,26 +74,29 @@ const LandingPage: React.FC = () => {
                                 placeholder="Hãy nhập từ khóa bạn quan tâm.."
                                 className="flex-1 px-5 py-3 text-gray-700 outline-none text-base"
                             />
-                            <button className="w-12 h-12 bg-blue-800 flex items-center justify-center">
-                                <img src="/images/search.png" alt="Search" className="w-5 h-5 filter invert" />
+                            <button
+                                className="w-12 h-12 flex items-center justify-center rounded-full m-1"
+                                style={{ background: 'rgba(0,86,166,1)' }}
+                            >
+                                <img src="/images/search.png" alt="Search" className="w-4 h-4 brightness-0 invert" />
                             </button>
                         </div>
                         <p className="text-white mt-3 text-sm">Bạn đang tìm kiếm điều gì?</p>
 
-                        <div className="flex gap-3 mt-4">
+                        <div className="flex flex-wrap gap-3 justify-center">
                             {searchTags.map((tag) => (
                                 <div
                                     key={tag.label}
-                                    className="flex items-center gap-2 bg-white/30 backdrop-blur-md rounded-full px-4 py-2 cursor-pointer hover:bg-white/50 transition"
+                                    className="flex items-center gap-2 bg-white/25 backdrop-blur-md rounded-full pl-1 pr-5 py-1 cursor-pointer hover:bg-white/40 transition-all"
                                 >
-                                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center relative">
+                                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                         <img
                                             src={`/images/${tag.img}`}
                                             alt={tag.label}
-                                            className="w-5 h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                                            className="w-5 h-5"
                                         />
                                     </div>
-                                    <span className="text-white font-medium">{tag.label}</span>
+                                    <span className="text-white font-medium text-sm">{tag.label}</span>
                                 </div>
                             ))}
                         </div>
@@ -172,25 +104,45 @@ const LandingPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* Projects */}
-            <section className="py-16 text-center">
-                <div className="max-w-3xl mx-auto mb-10">
+            {/* projects */}
+            <section className="py-16 bg-white">
+                {/* Tiêu đề */}
+                <div className="max-w-3xl mx-auto text-center mb-12">
                     <h2 className="text-5xl font-bold mb-4">Dự án tiêu biểu</h2>
-                    <p className="text-gray-500">Dự án tiêu biểu thể hiện năng lực, uy tín và dấu ấn của doanh nghiệp trong từng lĩnh vực hoạt động.</p>
+                    <p className="text-gray-500 text-md">
+                        Dự án tiêu biểu thể hiện năng lực, uy tín và dấu ấn của doanh nghiệp trong từng lĩnh vực hoạt động.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 max-w-[1110px] mx-auto">
+                {/* Grid dự án */}
+                <div className="max-w-[1110px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center">
                     {projects.map((p) => (
-                        <div key={p.name} className="relative h-[319px] rounded-lg text-left p-5 flex flex-col justify-start text-white" style={{ backgroundImage: `url(/images/${p.img})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-                            <div className="absolute inset-0 bg-black/40 rounded-lg"></div>
-                            <h3 className="relative z-10 text-lg font-bold">{p.name}</h3>
-                            <p className="relative z-10">{p.area}</p>
-                            <p className="relative z-10">{p.cost}</p>
-                            <p className="relative z-10">{p.duration}</p>
-                        </div>
+                        <a
+                            key={p.name}
+                            className="relative w-[256px] h-[319px] rounded-[16px] overflow-hidden group shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2"
+                        >
+                            {/* Background ảnh */}
+                            <div
+                                className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-105"
+                                style={{ backgroundImage: `url(/images/${p.img})` }}
+                            ></div>
+
+                            {/* Overlay đen mờ */}
+                            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+
+                            {/* Nội dung trên góc trái */}
+                            <div className="relative z-10 p-5 flex flex-col justify-start items-start h-full text-white">
+                                <h3 className="text-lg font-bold mb-1 group-hover:text-[#77d1de] transition-colors">{p.name}</h3>
+                                <p className="text-sm">{p.area}</p>
+                                <p className="text-sm">{p.cost}</p>
+                                <p className="text-sm">{p.duration}</p>
+                            </div>
+                        </a>
                     ))}
                 </div>
             </section>
+
+
 
             {/* Features */}
             <section className="py-16 bg-gray-100 text-center">
@@ -526,56 +478,8 @@ const LandingPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Footer */}
-            <footer className="bg-gray-900 text-gray-300 pt-12 pb-6">
-                <div className="max-w-6xl mx-auto px-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* Logo + Social */}
-                    <div>
-                        <img src="/images/logo-white.png" alt="HiTar logo" className="w-24 mb-4"/>
-                        <p className="mb-2">Follow Us</p>
-                        <div className="flex gap-4 mt-2">
-                            <a href="#"><img src="/images/insta.png" alt="Instagram" className="w-7 hover:scale-110 transition"/></a>
-                            <a href="#"><img src="/images/twitter.png" alt="Twitter" className="w-7 hover:scale-110 transition"/></a>
-                            <a href="#"><img src="/images/facebook.png" alt="Facebook" className="w-7 hover:scale-110 transition"/></a>
-                            <a href="#"><img src="/images/youtube.png" alt="YouTube" className="w-7 hover:scale-110 transition"/></a>
-                        </div>
-                    </div>
-
-                    {/* Danh mục */}
-                    <div>
-                        <h4 className="text-white font-semibold mb-3">Danh mục</h4>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-white transition">Giới thiệu</a></li>
-                            <li><a href="#" className="hover:text-white transition">Tin tức sự kiện</a></li>
-                            <li><a href="#" className="hover:text-white transition">Pháp lý & Chính sách</a></li>
-                            <li><a href="#" className="hover:text-white transition">Dự án</a></li>
-                        </ul>
-                    </div>
-
-                    {/* Liên hệ */}
-                    <div>
-                        <h4 className="text-white font-semibold mb-3">Liên hệ</h4>
-                        <p>Công ty TNHH KSCO Việt Nam</p>
-                        <p>Email: <a href="mailto:welcome@HiTar.com.vn" className="hover:text-white">welcome@HiTar.com.vn</a></p>
-                        <p>Điện thoại: (+84) 944969622</p>
-                    </div>
-
-                    {/* Địa chỉ */}
-                    <div>
-                        <h4 className="text-white font-semibold mb-3">Địa chỉ</h4>
-                        <p>Số 7, ngõ 96 đường Lê Công Thanh, phường Phù Ly,</p>
-                        <p>thành phố Ninh Bình</p>
-                    </div>
-                </div>
-
-                <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-500 text-sm">
-                    Copyright © 2025. HiTar
-                </div>
-            </footer>
-
         </>
     );
 };
 
-export default LandingPage;
+export default Homepage;
