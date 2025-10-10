@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7460ec29-b168-4f30-8722-41d1bfdccb03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/phaply1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/phaply2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/phaply3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/phaply4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/phap-ly/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/tin-tuc/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/news/news.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/phap-ly/phap-ly.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/public/hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/kim-bang-iv/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/kim-bang-iv/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/homepage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/kim-bang-iv/kim-bang-iv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/kim-bang-iv/kim-bang-iv.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/news/news.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news/news.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/public/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/hero.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +104,7 @@
       <workItem from="1760002435831" duration="4516000" />
       <workItem from="1760017100689" duration="14176000" />
       <workItem from="1760059529764" duration="1381000" />
-      <workItem from="1760060943858" duration="5671000" />
+      <workItem from="1760060943858" duration="8577000" />
     </task>
     <servers />
   </component>

@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ title, homepage, currentPage, bgImage }) =>
     return (
         <section className="relative bg-cover bg-center min-h-[485px]" style={BGS}>
             {/* Lớp làm mờ overlay */}
-            <div className="absolute inset-0 bg-black/45 backdrop-blur-[12px]"></div>
+            <div className="absolute inset-0 bg-black/20 backdrop-blur-[12px]"></div>
 
             <div className="absolute bottom-0 left-0 z-10 px-4 py-8 md:py-12 md:px-10 text-left">
                 <p className="text-white text-base sm:text-lg md:text-xl lg:text-[12px] mb-4 flex items-center gap-1 font-[400] leading-[150%] tracking-[0px]">
