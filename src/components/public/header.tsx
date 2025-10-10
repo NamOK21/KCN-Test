@@ -17,6 +17,7 @@ interface HeaderProps {
 const menuItems: MenuItem[] = [
     { label: "Giới thiệu", link: "/gioi-thieu" },
     { label: "Tin tức sự kiện", link: "/tin-tuc" },
+    { label: "Pháp lý & Chính sách", link: "/phap-ly" },
     {
         label: "Dự án",
         subItems: [
@@ -27,8 +28,7 @@ const menuItems: MenuItem[] = [
             { label: "KCN Thanh Niêm 6", link: "/projects/than-nhiem-6" },
         ],
     },
-    { label: "Pháp lý & Chính sách", link: "/phap-ly" },
-    { label: "Hỗ trợ", link: "/ho-tro" },
+    { label: "Liên hệ", link: "/ho-tro" },
 ];
 
 const Header: React.FC<HeaderProps> = ({ variant = "dark" }) => {

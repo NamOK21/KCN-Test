@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Homepage: React.FC = () => {
     const searchTags = [
@@ -8,10 +9,10 @@ const Homepage: React.FC = () => {
     ];
 
     const projects = [
-        { img: "KB4.png", name: "KCN Kim Bảng IV", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm" },
-        { img: "KB.png", name: "KCN Kim Bình", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm" },
-        { img: "TN4.png", name: "KCN Thanh niêm 4", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm" },
-        { img: "TN5.png", name: "KCN Thanh niêm 5", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm" },
+        { img: "KB4.png", name: "KCN Kim Bảng IV", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "/projects/kim-bang-iv" },
+        { img: "KB.png", name: "KCN Kim Bình", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
+        { img: "TN4.png", name: "KCN Thanh niêm 4", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
+        { img: "TN5.png", name: "KCN Thanh niêm 5", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
     ];
 
     const features = [
@@ -117,9 +118,10 @@ const Homepage: React.FC = () => {
                 {/* Grid dự án */}
                 <div className="max-w-[1110px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center">
                     {projects.map((p) => (
-                        <a
+                        <Link
                             key={p.name}
-                            className="relative w-[256px] h-[319px] rounded-[16px] overflow-hidden group shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2"
+                            href={p.link || "#"} // <-- fallback tránh lỗi undefined
+                            className="relative w-[256px] h-[319px] rounded-[16px] overflow-hidden group shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 cursor-pointer"
                         >
                             {/* Background ảnh */}
                             <div
@@ -130,17 +132,19 @@ const Homepage: React.FC = () => {
                             {/* Overlay đen mờ */}
                             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
 
-                            {/* Nội dung trên góc trái */}
+                            {/* Nội dung */}
                             <div className="relative z-10 p-5 flex flex-col justify-start items-start h-full text-white">
                                 <h3 className="text-lg font-bold mb-1 group-hover:text-[#77d1de] transition-colors">{p.name}</h3>
                                 <p className="text-sm">{p.area}</p>
                                 <p className="text-sm">{p.cost}</p>
                                 <p className="text-sm">{p.duration}</p>
                             </div>
-                        </a>
+                        </Link>
+
                     ))}
                 </div>
             </section>
+
 
 
 
