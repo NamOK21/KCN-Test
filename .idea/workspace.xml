@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7460ec29-b168-4f30-8722-41d1bfdccb03" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/quyhoach.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/news-pages/hanam/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/news/news-pages.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/project tabs/DocumentsSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/project tabs/OverviewTab.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/project tabs/PlanningMap.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/project tabs/PolicyTab.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/project tabs/TechnicalTab.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/project tabs/project-tabs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/public/promotion.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/projects/kim-bang-iv/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/kim-bang-iv/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/news/news.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news/news.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/public/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/public/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/kim-bang-iv/kim-bang-iv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/kim-bang-iv/kim-bang-iv.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +41,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/app/layout.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/phap-ly/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/homepage/homepage.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/news/news-pages.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/news/news.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/phap-ly/phap-ly.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/kim-bang-iv/kim-bang-iv.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/public/header.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/public/hero.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/public/project tabs/DocumentsSection.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/public/project tabs/PlanningMap.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/public/project tabs/project-tabs.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/public/promotion.tsx" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -45,31 +64,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/thieutanam/Codes/KCN-Test&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\thieutanam\\Codes\\KCN-Test\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "D:/thieutanam/Codes/KCN-Test/public/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\thieutanam\\Codes\\KCN-Test\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\thieutanam\Codes\KCN-Test\public\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\thieutanam\Codes\KCN-Test\src\components\public\project tabs" />
+      <recent name="D:\thieutanam\Codes\KCN-Test\src\app\news-pages\hanam" />
       <recent name="D:\thieutanam\Codes\KCN-Test\public\images" />
       <recent name="D:\thieutanam\Codes\KCN-Test\src\components" />
       <recent name="D:\thieutanam\Codes\KCN-Test\public" />
-      <recent name="D:\thieutanam\Codes\KCN-Test\src\app\projects\kim-bang-iv" />
-      <recent name="D:\thieutanam\Codes\KCN-Test\src\app" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -104,7 +126,11 @@
       <workItem from="1760002435831" duration="4516000" />
       <workItem from="1760017100689" duration="14176000" />
       <workItem from="1760059529764" duration="1381000" />
-      <workItem from="1760060943858" duration="8577000" />
+      <workItem from="1760060943858" duration="11506000" />
+      <workItem from="1760079956322" duration="10423000" />
+      <workItem from="1760154889479" duration="813000" />
+      <workItem from="1760190527793" duration="2924000" />
+      <workItem from="1760204732095" duration="4866000" />
     </task>
     <servers />
   </component>

@@ -1,14 +1,12 @@
 import Footer from "@/components/public/footer";
 import Header from "@/components/public/header";
-import KimBangIv from "@/components/projects/kim-bang-iv/kim-bang-iv";
-import ProjectTabs from "@/components/public/project tabs/project-tabs";
+import Hanam from "@/components/news/news-pages";
 
 export default function Home() {
     return (
         <>
             <Header variant={"light"} />
-            <KimBangIv />
-            <ProjectTabs />
+            <Hanam />
             <Footer />
         </>
     );
