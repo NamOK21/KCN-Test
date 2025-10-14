@@ -3,10 +3,11 @@ import Link from "next/link";
 
 const Homepage: React.FC = () => {
     const searchTags = [
-        { img: "chungcu.png", label: "Chung cư" },
-        { img: "khucongnghiep.png", label: "Khu công nghiệp" },
-        { img: "toanha.png", label: "Toà nhà" },
+        { src: "/icons/custom/chungcu.svg", label: "Chung cư" },
+        { src: "/icons/custom/khucongnghiep.svg", label: "Khu công nghiệp" },
+        { src: "/icons/custom/toanha.svg", label: "Toà nhà" },
     ];
+
 
     const projects = [
         { img: "KB4.png", name: "KCN Kim Bảng IV", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "/projects/kim-bang-iv" },
@@ -53,7 +54,7 @@ const Homepage: React.FC = () => {
 
     return (
         <>
-            {/* Hero */}
+            {/* ================= HERO ================= */}
             <section className="relative bg-cover bg-center min-h-screen" style={{ backgroundImage: "url('/images/background.png')" }}>
                 <div className="absolute inset-0 bg-black/45"></div>
                 <div className="relative z-10 pt-[138px] flex flex-col items-center justify-center text-center px-4 py-20">
@@ -67,7 +68,7 @@ const Homepage: React.FC = () => {
                         Nơi chiến lược kinh doanh của bạn gặp gỡ cơ sở hạ tầng hiện đại và tiềm năng tăng trưởng vượt trội.
                     </p>
 
-                    {/* Search */}
+                    {/* ================= SEARCH ================= */}
                     <div className="w-full max-w-3xl flex flex-col items-center">
                         <div className="flex w-full bg-white rounded-full shadow-md overflow-hidden">
                             <input
@@ -79,25 +80,37 @@ const Homepage: React.FC = () => {
                                 className="w-12 h-12 flex items-center justify-center rounded-full m-1"
                                 style={{ background: 'rgba(0,86,166,1)' }}
                             >
-                                <img src="/images/search.png" alt="Search" className="w-4 h-4 brightness-0 invert" />
+                                <img
+                                    src="/icons/interface/search_magnifying_glass.svg"
+                                    alt="Search"
+                                    className="w-4 h-4"
+                                    style={{
+                                        filter: "invert(100%)", // giữ màu trắng
+                                        width: "20px",
+                                        height: "20px",
+                                    }}
+                                />
                             </button>
                         </div>
                         <p className="text-white mt-3 text-sm">Bạn đang tìm kiếm điều gì?</p>
 
-                        <div className="flex flex-wrap gap-3 justify-center">
-                            {searchTags.map((tag) => (
+                        <div className="flex flex-wrap gap-3 justify-center mt-2">
+                            {searchTags.map(({ src, label }) => (
                                 <div
-                                    key={tag.label}
+                                    key={label}
                                     className="flex items-center gap-2 bg-white/25 backdrop-blur-md rounded-full pl-1 pr-5 py-1 cursor-pointer hover:bg-white/40 transition-all"
                                 >
                                     <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                         <img
-                                            src={`/images/${tag.img}`}
-                                            alt={tag.label}
+                                            src={src}
+                                            alt={label}
                                             className="w-5 h-5"
+                                            style={{
+                                                filter: "invert(25%) sepia(98%) saturate(6441%) hue-rotate(200deg) brightness(95%) contrast(91%)",
+                                            }}
                                         />
                                     </div>
-                                    <span className="text-white font-medium text-sm">{tag.label}</span>
+                                    <span className="text-white font-medium text-sm">{label}</span>
                                 </div>
                             ))}
                         </div>

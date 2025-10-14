@@ -1,17 +1,21 @@
 "use client";
 import React from "react";
+import { Dispatch, SetStateAction } from "react";
 import Hero from "@/components/public/hero";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const KimBangIV: React.FC = () => {
+interface KimBangIvProps {
+    showDetails: boolean;
+    setShowDetails: Dispatch<SetStateAction<boolean>>;
+}
+
+const KimBangIv: React.FC<KimBangIvProps> = ({ showDetails, setShowDetails }) => {
     const TITLE = "Khu công nghiệp Kim Bảng IV";
     const DETAILS = [
         { label: "Diện tích", value: "295ha", icon: "🖊️" },
@@ -23,28 +27,16 @@ const KimBangIV: React.FC = () => {
     const DESCRIPTION_2 =
         "Quy mô toàn khu khoảng 295,21 ha (Giai đoạn I ~183,94 ha), quy hoạch giao thông & bản cốt, hạ tầng đồng bộ (điện, nước, viễn thông), trạm xử lý nước thải tập trung, mạng xanh và hồ điều hoà, bảo đảm vận hành bền vững.";
     const DESCRIPTION_3 =
-        "Thời hạn hoạt động 50 năm, tổng vốn hạ tầng dự kiến ~2.465 tỷ đồng, mục tiêu hoàn thiện trong 36 tháng kể từ bàn giao đất. Định hướng thu hút các ngành điện tử, công nghệ cao, cơ khí chế tạo, công nghiệp hỗ trợ, logistics; người lao động dự kiến 16.000–20.000 người và được hưởng các ưu đãi đầu tư (thuế, tiền thuê đất, thủ tục).";
+        "Thời hạn hoạt động 50 năm, tổng vốn hạ tầng dự kiến ~2.465 tỷ đồng, mục tiêu hoàn thiện trong 36 tháng kể từ bàn giao đất...";
 
-    const IMAGES = [
-        "/images/img1.png",
-        "/images/img2.png",
-        "/images/img3.png",
-    ];
+    const IMAGES = ["/images/img1.png", "/images/img2.png", "/images/img3.png"];
 
     return (
         <>
-            {/* Hero Section */}
-            <Hero
-                title={TITLE}
-                homepage="Trang chủ"
-                currentPage="Dự án"
-                bgImage={IMAGES[0]}
-            />
+            <Hero title={TITLE} homepage="Trang chủ" currentPage="Dự án" bgImage={IMAGES[0]} />
 
-            {/* Content Section */}
             <section className="px-4 md:px-10 py-16">
                 <div className="max-w-[1110px] mx-auto flex flex-col md:flex-row gap-8">
-                    {/* Cột trái */}
                     <div className="md:w-1/3 space-y-5">
                         <h2 className="text-3xl font-bold text-gray-900">{TITLE}</h2>
 
@@ -63,12 +55,16 @@ const KimBangIV: React.FC = () => {
                             ))}
                         </div>
 
-                        <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:shadow-md transition-all duration-300 text-sm font-medium">
-                            Chi tiết phân lô
+                        <button
+                            onClick={() => setShowDetails(!showDetails)}
+                            className={`px-4 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:shadow-md transition-all duration-300 text-sm font-medium ${
+                                showDetails ? "bg-blue-600 text-white" : ""
+                            }`}
+                        >
+                            {showDetails ? "Ẩn chi tiết phân lô" : "Chi tiết phân lô"}
                         </button>
                     </div>
 
-                    {/* Cột phải */}
                     <div className="md:w-[520px] w-full text-gray-700 space-y-4 text-justify lg:text-[16px] font-[500] leading-relaxed">
                         <p>{DESCRIPTION_1}</p>
                         <p>{DESCRIPTION_2}</p>
@@ -77,7 +73,7 @@ const KimBangIV: React.FC = () => {
                 </div>
             </section>
 
-            {/* Image Slider Section */}
+            {/* Slider (vẫn ở đây trong component KimBangIv) */}
             <section className="px-4 md:px-10 pb-20">
                 <div className="max-w-[1110px] mx-auto">
                     <Swiper
@@ -88,6 +84,7 @@ const KimBangIV: React.FC = () => {
                         spaceBetween={20}
                         slidesPerView={3}
                         loop={true}
+                        speed={800}
                         breakpoints={{
                             0: { slidesPerView: 1 },
                             768: { slidesPerView: 2 },
@@ -115,4 +112,4 @@ const KimBangIV: React.FC = () => {
     );
 };
 
-export default KimBangIV;
+export default KimBangIv;

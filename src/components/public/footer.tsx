@@ -10,10 +10,38 @@ const Footer: React.FC = () => {
                     <img src="/images/logo-white.png" alt="HiTar logo" className="w-24 mb-4" />
                     <p className="mb-2">Follow Us</p>
                     <div className="flex gap-4 mt-2">
-                        <a href="#"><img src="/images/insta.png" alt="Instagram" className="w-7 hover:scale-110 transition" /></a>
-                        <a href="#"><img src="/images/twitter.png" alt="Twitter" className="w-7 hover:scale-110 transition" /></a>
-                        <a href="#"><img src="/images/facebook.png" alt="Facebook" className="w-7 hover:scale-110 transition" /></a>
-                        <a href="#"><img src="/images/youtube.png" alt="YouTube" className="w-7 hover:scale-110 transition" /></a>
+                        <a href="#">
+                            <img
+                                src="/icons/custom/instagram.svg"
+                                alt="Instagram"
+                                style={{ width: "30.88px", height: "30.88px" }}
+                                className="hover:scale-110 transition"
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                src="/icons/custom/twitter.svg"
+                                alt="Twitter"
+                                style={{ width: "30.88px", height: "30.88px" }}
+                                className="hover:scale-110 transition"
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                src="/icons/custom/facebook.svg"
+                                alt="Facebook"
+                                style={{ width: "30.88px", height: "30.88px" }}
+                                className="hover:scale-110 transition"
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                src="/icons/custom/youtube.svg"
+                                alt="YouTube"
+                                style={{ width: "30.88px", height: "30.88px" }}
+                                className="hover:scale-110 transition"
+                            />
+                        </a>
                     </div>
                 </div>
 
