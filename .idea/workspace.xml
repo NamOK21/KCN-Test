@@ -7,6 +7,13 @@
     <list default="true" id="7460ec29-b168-4f30-8722-41d1bfdccb03" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/homepage/homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/homepage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/DocumentsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/DocumentsSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/OverviewTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/OverviewTab.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/PlanningMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/PlanningMap.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/PolicyTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/PolicyTab.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/TechnicalTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/TechnicalTab.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/footer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +47,8 @@
     <setting file="file://$PROJECT_DIR$/src/components/projects/lotdetails.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/DocumentsSection.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/PlanningMap.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/PolicyTab.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/TechnicalTab.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/public/footer.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/public/header.tsx" root0="SKIP_INSPECTION" />
@@ -129,6 +138,7 @@
       <workItem from="1760408849991" duration="8090000" />
       <workItem from="1760427737142" duration="718000" />
       <workItem from="1760492178947" duration="872000" />
+      <workItem from="1760510486697" duration="13042000" />
     </task>
     <servers />
   </component>

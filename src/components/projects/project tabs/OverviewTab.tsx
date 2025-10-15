@@ -2,7 +2,7 @@ import React from "react";
 
 const OverviewTab = () => (
     <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Tổng quan</h2>
+        <h2 className="text-[42px] font-bold text-gray-900 mb-6">Tổng quan</h2>
         <div className="grid md:grid-cols-2 gap-6 bg-white p-8 rounded-xl shadow-sm">
             {[
                 {

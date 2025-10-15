@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                 {/* Địa chỉ */}
                 <div className="max-w-[230px]">
                     <h4 className="text-white font-semibold mb-3">Địa chỉ</h4>
-                    <p>Số 7, ngõ 96 đường Lê Công Thanh, phường Phù Ly,</p>
+                    <p>Số 7, ngõ 96 đường Lê Công Thanh, phường Phủ Lý,</p>
                     <p>thành phố Ninh Bình</p>
                 </div>
             </div>

@@ -1,14 +1,36 @@
 "use client";
-import React from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { Maximize2, Minus, Plus } from "lucide-react";
 
 const PlanningMapTab: React.FC = () => {
+    const mapRef = useRef<HTMLDivElement>(null);
+    const [scale, setScale] = useState(1);
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [dragging, setDragging] = useState(false);
+    const [origin, setOrigin] = useState({ x: 0, y: 0 });
+
+    const handleZoomIn = () => setScale((prev) => Math.min(prev + 0.1, 2));
+    const handleZoomOut = () => setScale((prev) => Math.max(prev - 0.1, 0.5));
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        setDragging(true);
+        setOrigin({ x: e.clientX - position.x, y: e.clientY - position.y });
+    };
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (dragging) {
+            setPosition({ x: e.clientX - origin.x, y: e.clientY - origin.y });
+        }
+    };
+
+    const handleMouseUp = () => setDragging(false);
+    const handleMouseLeave = () => setDragging(false);
+
     return (
-        <div className="w-full max-w-[1110px] mx-auto px-4 md:px-6">
-            {/* --- Header box: title left, 3 selects right --- */}
-            <div className="w-full bg-white rounded-[12px] flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0 px-4 md:px-6 py-4 shadow-sm mb-6">
-                {/* Title */}
+        <div className="w-full px-4 md:px-6">
+            {/* Header */}
+            <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0 px-0 py-2 mb-6">
                 <div className="flex-1">
                     <h2 className="text-[18px] md:text-[24px] lg:text-[28px] font-bold text-gray-900">
                         Mặt bằng quy hoạch lô
@@ -18,11 +40,10 @@ const PlanningMapTab: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Dropdowns */}
                 <div className="flex flex-wrap md:flex-nowrap items-center gap-2 md:gap-3">
                     <select
                         aria-label="Diện tích"
-                        className="w-[120px] sm:w-[140px] h-[36px] text-sm px-3 border border-gray-200 rounded-lg bg-white focus:outline-none"
+                        className="w-[120px] sm:w-[140px] h-[36px] text-sm px-3 border border-gray-200 rounded-lg focus:outline-none"
                         defaultValue=""
                     >
                         <option value="" disabled>
@@ -34,7 +55,7 @@ const PlanningMapTab: React.FC = () => {
 
                     <select
                         aria-label="Quy mô"
-                        className="w-[120px] sm:w-[140px] h-[36px] text-sm px-3 border border-gray-200 rounded-lg bg-white focus:outline-none"
+                        className="w-[120px] sm:w-[140px] h-[36px] text-sm px-3 border border-gray-200 rounded-lg focus:outline-none"
                         defaultValue=""
                     >
                         <option value="" disabled>
@@ -47,7 +68,7 @@ const PlanningMapTab: React.FC = () => {
 
                     <select
                         aria-label="Nguồn lực"
-                        className="w-[120px] sm:w-[140px] h-[36px] text-sm px-3 border border-gray-200 rounded-lg bg-white focus:outline-none"
+                        className="w-[120px] sm:w-[140px] h-[36px] text-sm px-3 border border-gray-200 rounded-lg focus:outline-none"
                         defaultValue=""
                     >
                         <option value="" disabled>
@@ -59,40 +80,51 @@ const PlanningMapTab: React.FC = () => {
                 </div>
             </div>
 
-            {/* --- Khung bản đồ --- */}
-            <div className="relative w-full bg-white rounded-[24px] shadow-[6px_6px_54px_0px_#0000000D] overflow-hidden">
-                {/* Container crop giữ tỉ lệ 1632/795 ≈ 2.05 */}
-                <div className="relative w-full aspect-[1632/795] overflow-hidden rounded-[24px]">
+            {/* Map */}
+            <div className="relative w-full max-w-[1600px] mx-auto overflow-hidden rounded-[24px] cursor-grab select-none">
+                <div
+                    ref={mapRef}
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseLeave}
+                    style={{
+                        transform: `scale(${scale}) translate(${position.x / scale}px, ${position.y / scale}px)`,
+                        transformOrigin: "top left",
+                        transition: dragging ? "none" : "transform 0.2s ease-in-out",
+                    }}
+                    className="relative w-full pb-[48.7%] rounded-[24px]"
+                >
                     <Image
                         src="/images/quyhoach.png"
                         alt="Bản đồ khu công nghiệp"
                         fill
-                        className="object-cover object-center scale-[1.02] translate-x-[-0.7%] translate-y-[-2%]"
-                        sizes="(max-width: 768px) 100vw, 80vw"
+                        className="object-cover object-center"
+                        sizes="100vw"
                     />
                 </div>
 
-                {/* --- Nút điều khiển --- */}
+                {/* Zoom + fullscreen buttons */}
                 <div className="absolute top-3 right-3 sm:top-4 sm:right-4 flex flex-col items-end gap-2 sm:gap-3 z-10">
-                    {/* Fullscreen */}
                     <button
                         title="Phóng to toàn màn hình"
-                        className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] flex items-center justify-center bg-white text-gray-800 rounded-[10.67px] shadow-md hover:bg-gray-100 active:scale-95 transition"
+                        className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] flex items-center justify-center text-gray-800 rounded-[10.67px] shadow-md hover:bg-gray-100 active:scale-95 transition"
                     >
                         <Maximize2 size={18} className="sm:size-5" />
                     </button>
 
-                    {/* + và - liền nhau */}
                     <div className="flex flex-col rounded-[10.67px] overflow-hidden shadow-md">
                         <button
                             title="Thu nhỏ"
-                            className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] flex items-center justify-center bg-white text-gray-800 hover:bg-gray-100 active:scale-95 transition"
+                            onClick={handleZoomOut}
+                            className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] flex items-center justify-center text-gray-800 hover:bg-gray-100 active:scale-95 transition"
                         >
                             <Minus size={18} className="sm:size-5" />
                         </button>
                         <button
                             title="Phóng to"
-                            className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] flex items-center justify-center bg-white text-gray-800 hover:bg-gray-100 active:scale-95 transition"
+                            onClick={handleZoomIn}
+                            className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] flex items-center justify-center text-gray-800 hover:bg-gray-100 active:scale-95 transition"
                         >
                             <Plus size={18} className="sm:size-5" />
                         </button>

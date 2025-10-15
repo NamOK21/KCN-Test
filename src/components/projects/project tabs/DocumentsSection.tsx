@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Eye, Download, FileText } from "lucide-react";
+import { Eye, Download } from "lucide-react";
 
 interface DocumentItem {
     name: string;
@@ -16,7 +16,7 @@ interface DocumentsSectionProps {
 const DocumentsSection: React.FC<DocumentsSectionProps> = ({ title, items, mode }) => {
     return (
         <section className="max-w-[1110px] mx-auto px-4 my-10">
-            <h2 className="text-[20px] font-semibold text-gray-900 mb-6">{title}</h2>
+            <h2 className="text-[42px] font-bold text-gray-900 mb-6">{title}</h2>
 
             <div className="bg-white rounded-[8px] shadow-[6px_6px_54px_0px_#0000000D] divide-y">
                 {items.map((item, idx) => (
@@ -31,7 +31,11 @@ const DocumentsSection: React.FC<DocumentsSectionProps> = ({ title, items, mode 
                                     {String(idx + 1).padStart(2, "0")}
                                 </div>
                             ) : (
-                                <FileText className="text-blue-600 mt-1" size={20} />
+                                <img
+                                    src="/icons/custom/file.svg"
+                                    alt="file icon"
+                                    className="w-5 h-5 mt-1"
+                                />
                             )}
 
                             <div>
@@ -47,7 +51,7 @@ const DocumentsSection: React.FC<DocumentsSectionProps> = ({ title, items, mode 
                         {/* Bên phải */}
                         <div className="flex gap-3">
                             <button
-                                className="flex items-center justify-center gap-2 px-4 py-2 bg-[#979797] text-white text-[15px] font-[400] rounded-[8px] max-h-[42px]
+                                className="flex items-center justify-center gap-2 px-4 py-2 bg-[#F4F4F4] text-black text-[15px] font-[400] rounded-[8px] max-h-[42px]
                                 shadow-[6px_6px_54px_0px_#0000000D] hover:bg-[#7e7e7e] hover:text-[#DCEAFE] transition-all duration-200"
                             >
                                 <span>Xem tài liệu</span>
@@ -55,7 +59,7 @@ const DocumentsSection: React.FC<DocumentsSectionProps> = ({ title, items, mode 
                             </button>
 
                             <button
-                                className="flex items-center justify-center gap-2 px-4 py-2 bg-[#979797] text-white text-[15px] font-[400] rounded-[8px] max-h-[42px]
+                                className="flex items-center justify-center gap-2 px-4 py-2 bg-[#F4F4F4] text-black text-[15px] font-[400] rounded-[8px] max-h-[42px]
                                 shadow-[6px_6px_54px_0px_#0000000D] hover:bg-[#7e7e7e] hover:text-[#DCEAFE] transition-all duration-200"
                             >
                                 <span>Tải tài liệu</span>
