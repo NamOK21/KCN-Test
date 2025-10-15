@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
         <footer className="bg-gray-900 text-gray-300 pt-12 pb-6">
             <div className="max-w-6xl mx-auto px-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {/* Logo + Social */}
-                <div>
+                <div className="max-w-[230px]">
                     <img src="/images/logo-white.png" alt="HiTar logo" className="w-24 mb-4" />
                     <p className="mb-2">Follow Us</p>
                     <div className="flex gap-4 mt-2">
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 </div>
 
                 {/* Danh mục */}
-                <div>
+                <div className="max-w-[230px]">
                     <h4 className="text-white font-semibold mb-3">Danh mục</h4>
                     <ul className="space-y-2">
                         <li><a href="#" className="hover:text-white transition">Giới thiệu</a></li>
@@ -57,21 +57,27 @@ const Footer: React.FC = () => {
                 </div>
 
                 {/* Liên hệ */}
-                <div>
+                <div className="max-w-[230px]">
                     <h4 className="text-white font-semibold mb-3">Liên hệ</h4>
                     <p>Công ty TNHH KSCO Việt Nam</p>
-                    <p>Email: <a href="mailto:welcome@HiTar.com.vn" className="hover:text-white">welcome@HiTar.com.vn</a></p>
+                    <p>
+                        Email:{" "}
+                        <a href="mailto:welcome@HiTar.com.vn" className="hover:text-white">
+                            welcome@HiTar.com.vn
+                        </a>
+                    </p>
                     <p>Điện thoại: (+84) 944969622</p>
                 </div>
 
                 {/* Địa chỉ */}
-                <div>
+                <div className="max-w-[230px]">
                     <h4 className="text-white font-semibold mb-3">Địa chỉ</h4>
                     <p>Số 7, ngõ 96 đường Lê Công Thanh, phường Phù Ly,</p>
                     <p>thành phố Ninh Bình</p>
                 </div>
             </div>
 
+            {/* Copyright giữ nguyên */}
             <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-500 text-sm">
                 Copyright © 2025. HiTar
             </div>

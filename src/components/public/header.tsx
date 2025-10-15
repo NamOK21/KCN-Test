@@ -10,7 +10,7 @@ interface MenuItem {
 }
 
 interface HeaderProps {
-    variant?: "dark" | "light"; // dark = nền tối, light = nền sáng
+    variant?: "dark" | "light";
 }
 
 const menuItems: MenuItem[] = [
@@ -32,6 +32,7 @@ const menuItems: MenuItem[] = [
 
 const Header: React.FC<HeaderProps> = ({ variant = "dark" }) => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -39,39 +40,56 @@ const Header: React.FC<HeaderProps> = ({ variant = "dark" }) => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Màu nền và icon theo scroll
+    // 🔒 Khóa cuộn body khi menu mở
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    }, [menuOpen]);
+
     const bgClass = isScrolled
         ? "bg-white/90 backdrop-blur-md"
         : variant === "dark"
             ? "bg-transparent"
             : "bg-white";
 
-    const textColor = isScrolled ? "text-black" : variant === "dark" ? "text-white" : "text-black";
-    const iconFilter = isScrolled ? "invert(0%)" : variant === "dark" ? "invert(100%)" : "invert(0%)";
-    const borderColor = isScrolled ? "border-black" : variant === "dark" ? "border-white" : "border-black";
+    const textColor =
+        isScrolled ? "text-black" : variant === "dark" ? "text-white" : "text-black";
+    const iconFilter =
+        isScrolled ? "invert(0%)" : variant === "dark" ? "invert(100%)" : "invert(0%)";
+    const borderColor =
+        isScrolled ? "border-black" : variant === "dark" ? "border-white" : "border-black";
 
     return (
-        <header
-            className={`fixed top-0 left-0 w-full h-[82px] flex items-center z-50 px-6 lg:px-12 transition-all duration-300 ${bgClass}`}
-        >
-            <nav className="w-full flex items-center justify-between relative">
-                {/* Logo */}
-                <div className="flex items-center">
-                    <Link href="/">
-                        <img src="/images/logo.png" alt="Logo" className="max-h-12 object-contain" />
-                    </Link>
-                </div>
+        <>
+            {/* HEADER */}
+            <header
+                className={`fixed top-0 left-0 w-full h-[82px] flex items-center z-[100] px-6 lg:px-12 transition-all duration-300 ${bgClass}`}
+            >
+                <nav className="w-full flex items-center justify-between relative">
+                    {/* Logo */}
+                    <div className="flex items-center">
+                        <Link href="/">
+                            <img
+                                src="/images/logo.png"
+                                alt="Logo"
+                                className="max-h-12 object-contain"
+                            />
+                        </Link>
+                    </div>
 
-                {/* Menu trung tâm (desktop) */}
-                <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-6">
-                    {menuItems.map((item) =>
+                    {/* Desktop Menu */}
+                    <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-6">
+                        {menuItems.map((item) =>
                             item.subItems ? (
                                 <div key={item.label} className="relative group">
-                <span className={`${textColor} font-medium hover:text-blue-500 transition-colors cursor-pointer`}>
-                  {item.label}
-                </span>
-
-                                    {/* Dropdown */}
+                                    <span
+                                        className={`${textColor} font-medium hover:text-blue-500 transition-colors cursor-pointer`}
+                                    >
+                                        {item.label}
+                                    </span>
                                     <div className="absolute left-0 top-full mt-1 w-[362px] h-[288px] bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-75 z-50 overflow-hidden">
                                         {item.subItems.map((subItem) => (
                                             <Link
@@ -84,9 +102,7 @@ const Header: React.FC<HeaderProps> = ({ variant = "dark" }) => {
                                                     src="/icons/arrow/chevron_right.svg"
                                                     alt=">"
                                                     className="w-4 h-4"
-                                                    style={{
-                                                        filter: "invert(0%)", // luôn màu đen, bất kể variant hay scroll
-                                                    }}
+                                                    style={{ filter: "invert(0%)" }}
                                                 />
                                             </Link>
                                         ))}
@@ -101,33 +117,98 @@ const Header: React.FC<HeaderProps> = ({ variant = "dark" }) => {
                                     {item.label}
                                 </Link>
                             )
-                    )}
-                </div>
-
-                {/* Bên phải */}
-                <div className="flex items-center gap-4 md:gap-5">
-                    <div className="flex items-center gap-2">
-                        <img src="/icons/communication/phone.svg" alt="Phone" className="w-6 h-6" style={{ filter: iconFilter }} />
-                        <span className={`${textColor} font-bold text-[15px]`}>+84 090 0238888</span>
+                        )}
                     </div>
 
-                    <button
-                        id="lang-toggle"
-                        className={`flex items-center justify-center w-10 h-10 border ${borderColor} rounded-full ${textColor} font-bold hover:bg-white/20 transition transform hover:scale-110`}
-                        data-lang="vi"
-                    >
-                        VN
-                    </button>
+                    {/* Right buttons */}
+                    <div className="flex items-center gap-3 md:gap-5">
+                        {/* VN Button */}
+                        <button
+                            id="lang-toggle"
+                            className={`flex items-center justify-center w-10 h-10 border ${borderColor} rounded-full ${textColor} font-bold bg-gray-50/10 hover:bg-white/20 transition transform hover:scale-110`}
+                        >
+                            VN
+                        </button>
 
-                    <Link
-                        href="#"
-                        className={`flex items-center justify-center w-10 h-10 border ${borderColor} rounded-full hover:bg-white/20 transition transform hover:scale-110`}
-                    >
-                        <img src="/icons/user/user_02.svg" alt="Account" className="w-5 h-5" style={{ filter: iconFilter }} />
-                    </Link>
-                </div>
-            </nav>
-        </header>
+                        {/* User Button */}
+                        <Link
+                            href="#"
+                            className={`flex items-center justify-center w-10 h-10 border ${borderColor} rounded-full bg-gray-50/10 hover:bg-white/20 transition transform hover:scale-110`}
+                        >
+                            <img
+                                src="/icons/user/user_02.svg"
+                                alt="Account"
+                                className="w-5 h-5"
+                                style={{ filter: iconFilter }}
+                            />
+                        </Link>
+
+                        {/* Hamburger Menu (mobile only) */}
+                        <button
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            className={`md:hidden flex items-center justify-center w-10 h-10 border ${borderColor} rounded-full bg-gray-50/10 hover:bg-white/20 transition transform hover:scale-110`}
+                        >
+                            <img
+                                src="/icons/menu/hamburger_md.svg"
+                                alt="Menu"
+                                className="w-5 h-5"
+                                style={{ filter: iconFilter }}
+                            />
+                        </button>
+                    </div>
+                </nav>
+            </header>
+
+            {/* MENU MOBILE */}
+            <div
+                className={`fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center gap-6 text-center z-[200] transition-all duration-500 ease-in-out ${
+                    menuOpen
+                        ? "opacity-100 visible translate-y-0"
+                        : "opacity-0 invisible -translate-y-8"
+                }`}
+            >
+                {menuItems.map((item) =>
+                    item.subItems ? (
+                        <div key={item.label} className="flex flex-col items-center gap-2">
+                            <span className="text-lg font-semibold text-gray-900">
+                                {item.label}
+                            </span>
+                            {item.subItems.map((sub) => (
+                                <Link
+                                    key={sub.label}
+                                    href={sub.link}
+                                    onClick={() => setMenuOpen(false)}
+                                    className="text-gray-700 text-base hover:text-blue-600 transition-colors"
+                                >
+                                    {sub.label}
+                                </Link>
+                            ))}
+                        </div>
+                    ) : (
+                        <Link
+                            key={item.label}
+                            href={item.link || "#"}
+                            onClick={() => setMenuOpen(false)}
+                            className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors"
+                        >
+                            {item.label}
+                        </Link>
+                    )
+                )}
+
+                {/* Nút đóng menu */}
+                <button
+                    onClick={() => setMenuOpen(false)}
+                    className="mt-10 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+                >
+                    <img
+                        src="/icons/menu/close_md.svg"
+                        alt="Close"
+                        className="w-6 h-6"
+                    />
+                </button>
+            </div>
+        </>
     );
 };
 
