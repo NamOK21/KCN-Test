@@ -22,9 +22,9 @@ const menuItems: MenuItem[] = [
         subItems: [
             { label: "KCN Kim Bảng IV", link: "/projects/kim-bang-iv" },
             { label: "KCN Kim Bình", link: "/projects/kim-binh" },
-            { label: "KCN Thanh Niêm 4", link: "/projects/than-nhiem-4" },
-            { label: "KCN Thanh Niêm 5", link: "/projects/than-nhiem-5" },
-            { label: "KCN Thanh Niêm 6", link: "/projects/than-nhiem-6" },
+            { label: "KCN Thanh Liêm 1", link: "/projects/thanh-liem-1" },
+            { label: "KCN Thanh Liêm 5", link: "/projects/thanh-liem-5" },
+            { label: "KCN Thanh Niêm 6", link: "/projects/thanh-liem-6" },
         ],
     },
     { label: "Liên hệ", link: "/ho-tro" },

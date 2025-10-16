@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7460ec29-b168-4f30-8722-41d1bfdccb03" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/documents/QH01 - VT.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/documents/QH03 - SDĐ.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.05.13 - QĐ 901 - QĐ thành lập cụm.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.06.20 - QĐ 3667 - TL - QĐ phê duyệt QH 1.500.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.06.20 - QĐ 3667 - TL - QĐ quản lý.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.06.23 - QĐ 1468 - UB tỉnh - QĐ chấp thuận chủ trương đầu tư.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.09.26 GCNĐKĐT CỤm Công nghiệp Thanh Liêm 1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thanhliem1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thanhliem2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thanhliem3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/generate-files-json.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/documents/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/project-files/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/projects/thanh-liem-1/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/projects/project tabs/ProjectDocuments.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/projects/thanh-liem-1/thanh-liem-1.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homepage/homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/homepage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/DocumentsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/DocumentsSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/OverviewTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/OverviewTab.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/PlanningMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/PlanningMap.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/PolicyTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/PolicyTab.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/TechnicalTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/TechnicalTab.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/public/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -31,13 +43,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/generate-files-json.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/next.config.ts" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/app/api/documents/route.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/app/api/project-files/route.ts" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/layout.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/lo-dat/[id]/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/news-pages/hanam/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/phap-ly/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/projects/kim-bang-iv/page.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/app/projects/thanh-liem-1/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/homepage/homepage.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/news/news-pages.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/news/news.tsx" root0="SKIP_INSPECTION" />
@@ -48,8 +64,10 @@
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/DocumentsSection.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/PlanningMap.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/PolicyTab.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/ProjectDocuments.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/TechnicalTab.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/projects/thanh-liem-1/thanh-liem-1.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/public/footer.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/public/header.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/public/hero.tsx" root0="SKIP_INSPECTION" />
@@ -88,11 +106,11 @@
       <recent name="D:\thieutanam\Codes\KCN-Test\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\thieutanam\Codes\KCN-Test\scripts" />
+      <recent name="D:\thieutanam\Codes\KCN-Test\public\files\thanhliem1\documents" />
+      <recent name="D:\thieutanam\Codes\KCN-Test\public\files\thanhliem1\legal" />
+      <recent name="D:\thieutanam\Codes\KCN-Test\public\images" />
       <recent name="D:\thieutanam\Codes\KCN-Test\public\icons" />
-      <recent name="D:\thieutanam\Codes\KCN-Test\public" />
-      <recent name="D:\thieutanam\Codes\KCN-Test" />
-      <recent name="D:\thieutanam\Codes\KCN-Test\src" />
-      <recent name="D:\thieutanam\Codes\KCN-Test\assets" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -139,10 +157,25 @@
       <workItem from="1760427737142" duration="718000" />
       <workItem from="1760492178947" duration="872000" />
       <workItem from="1760510486697" duration="13042000" />
+      <workItem from="1760542812277" duration="44000" />
+      <workItem from="1760542968825" duration="610000" />
+      <workItem from="1760580587006" duration="5605000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx</url>
+          <line>75</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
