@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface MenuItem {
     label: string;
@@ -15,24 +16,31 @@ interface HeaderProps {
 
 const menuItems: MenuItem[] = [
     { label: "Giới thiệu", link: "/gioi-thieu" },
-    { label: "Tin tức sự kiện", link: "/tin-tuc" },
-    { label: "Pháp lý & Chính sách", link: "/phap-ly" },
+    { label: "Tin tức & sự kiện", link: "/tin-tuc" },
+    { label: "Pháp lý", link: "/phap-ly" },
+    { label: "Ưu đãi", link: "/uu-dai" },
     {
         label: "Dự án",
         subItems: [
             { label: "KCN Kim Bảng IV", link: "/projects/kim-bang-iv" },
-            { label: "KCN Kim Bình", link: "/projects/kim-binh" },
-            { label: "KCN Thanh Liêm 1", link: "/projects/thanh-liem-1" },
-            { label: "KCN Thanh Liêm 5", link: "/projects/thanh-liem-5" },
-            { label: "KCN Thanh Niêm 6", link: "/projects/thanh-liem-6" },
+            { label: "KCN Thanh Liêm I", link: "/projects/thanh-liem-1" },
         ],
     },
     { label: "Liên hệ", link: "/ho-tro" },
 ];
 
+const languages = [
+    { code: "VN", label: "Tiếng Việt", flag: "vn" },
+    { code: "EN", label: "English", flag: "gb" },
+    { code: "JP", label: "日本語", flag: "jp" },
+];
+
 const Header: React.FC<HeaderProps> = ({ variant = "dark" }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [hoverDropdown, setHoverDropdown] = useState<string | null>(null);
+    const [hoverLang, setHoverLang] = useState(false);
+    const [language, setLanguage] = useState("VN");
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -40,174 +48,261 @@ const Header: React.FC<HeaderProps> = ({ variant = "dark" }) => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // 🔒 Khóa cuộn body khi menu mở
     useEffect(() => {
-        if (menuOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "";
-        }
+        document.body.style.overflow = menuOpen ? "hidden" : "";
     }, [menuOpen]);
 
     const bgClass = isScrolled
-        ? "bg-white/90 backdrop-blur-md"
+        ? "bg-white/90 backdrop-blur-md shadow-sm"
         : variant === "dark"
             ? "bg-transparent"
             : "bg-white";
 
     const textColor =
-        isScrolled ? "text-black" : variant === "dark" ? "text-white" : "text-black";
-    const iconFilter =
-        isScrolled ? "invert(0%)" : variant === "dark" ? "invert(100%)" : "invert(0%)";
+        isScrolled || variant === "light" ? "text-black" : "text-white";
+
+    const hoverTextColor =
+        variant === "dark" && !isScrolled
+            ? "hover:text-blue-400"
+            : "hover:text-blue-600";
+
     const borderColor =
-        isScrolled ? "border-black" : variant === "dark" ? "border-white" : "border-black";
+        isScrolled || variant === "light" ? "border-black" : "border-white";
+
+    const mobileIconColor =
+        menuOpen || (variant === "dark" && !isScrolled)
+            ? "invert(100%)"
+            : "invert(0%)";
 
     return (
         <>
-            {/* HEADER */}
-            <header
-                className={`fixed top-0 left-0 w-full h-[82px] flex items-center z-[100] px-6 lg:px-12 transition-all duration-300 ${bgClass}`}
+            <motion.header
+                initial={{ y: -80 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className={`fixed top-0 left-0 w-full h-[68px] sm:h-[80px] flex items-center z-[100] px-4 sm:px-6 md:px-10 transition-all duration-300 ${bgClass}`}
             >
                 <nav className="w-full flex items-center justify-between relative">
                     {/* Logo */}
-                    <div className="flex items-center">
-                        <Link href="/">
-                            <img
-                                src="/images/logo.png"
-                                alt="Logo"
-                                className="max-h-12 object-contain"
-                            />
-                        </Link>
-                    </div>
+                    <Link
+                        href="/"
+                        className="flex items-center transition-transform duration-500 hover:scale-105"
+                    >
+                        <img
+                            src="/icons/logo/logo.svg"
+                            alt="Logo"
+                            className="h-8 sm:h-10 md:h-11 lg:h-12 object-contain"
+                        />
+                    </Link>
 
-                    {/* Desktop Menu */}
-                    <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-6">
+                    <div
+                        className={`hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 lg:gap-8 xl:gap-10`}
+                    >
                         {menuItems.map((item) =>
-                            item.subItems ? (
-                                <div key={item.label} className="relative group">
-                                    <span
-                                        className={`${textColor} font-medium hover:text-blue-500 transition-colors cursor-pointer`}
+                                item.subItems ? (
+                                    <div
+                                        key={item.label}
+                                        className="relative whitespace-nowrap"
+                                        onMouseEnter={() => setHoverDropdown(item.label)}
+                                        onMouseLeave={() => setHoverDropdown(null)}
+                                    >
+                  <span
+                      className={`${textColor} ${hoverTextColor} font-medium cursor-pointer text-[14px] lg:text-[15px] relative transition-colors duration-300`}
+                  >
+                    {item.label}
+                      <motion.span
+                          className="absolute left-0 -bottom-1 h-[2px] bg-blue-500 origin-left rounded-full"
+                          animate={{
+                              scaleX: hoverDropdown === item.label ? 1 : 0,
+                          }}
+                          initial={{ scaleX: 0 }}
+                          transition={{ duration: 0.3 }}
+                      />
+                  </span>
+
+                                        <AnimatePresence>
+                                            {hoverDropdown === item.label && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: -10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: -10 }}
+                                                    transition={{ duration: 0.25 }}
+                                                    className="absolute left-0 mt-3 bg-white rounded-xl shadow-xl py-2 min-w-[220px] z-50"
+                                                >
+                                                    {item.subItems.map((sub) => (
+                                                        <Link
+                                                            key={sub.label}
+                                                            href={sub.link}
+                                                            className="flex items-center justify-between px-5 py-3 text-gray-800 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200 text-[14px]"
+                                                        >
+                                                            <span>{sub.label}</span>
+                                                            <img
+                                                                src="/icons/arrow/chevron_right.svg"
+                                                                alt=">"
+                                                                className="w-4 h-4"
+                                                            />
+                                                        </Link>
+                                                    ))}
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </div>
+                                ) : (
+                                    <Link
+                                        key={item.label}
+                                        href={item.link || "#"}
+                                        className={`${textColor} ${hoverTextColor} font-medium text-[14px] lg:text-[15px] whitespace-nowrap relative transition-colors duration-300`}
                                     >
                                         {item.label}
-                                    </span>
-                                    <div className="absolute left-0 top-full mt-1 w-[362px] h-[288px] bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-75 z-50 overflow-hidden">
-                                        {item.subItems.map((subItem) => (
-                                            <Link
-                                                key={subItem.label}
-                                                href={subItem.link}
-                                                className="flex justify-between items-center px-4 py-4 text-black hover:text-[rgba(0,86,166,1)] hover:font-bold transition"
-                                            >
-                                                <span>{subItem.label}</span>
-                                                <img
-                                                    src="/icons/arrow/chevron_right.svg"
-                                                    alt=">"
-                                                    className="w-4 h-4"
-                                                    style={{ filter: "invert(0%)" }}
-                                                />
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-                            ) : (
-                                <Link
-                                    key={item.label}
-                                    href={item.link || "#"}
-                                    className={`${textColor} font-medium hover:text-blue-500 transition-colors`}
-                                >
-                                    {item.label}
-                                </Link>
-                            )
+                                    </Link>
+                                )
                         )}
                     </div>
 
-                    {/* Right buttons */}
-                    <div className="flex items-center gap-3 md:gap-5">
-                        {/* VN Button */}
-                        <button
-                            id="lang-toggle"
-                            className={`flex items-center justify-center w-10 h-10 border ${borderColor} rounded-full ${textColor} font-bold bg-gray-50/10 hover:bg-white/20 transition transform hover:scale-110`}
+                    <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setHoverLang(true)}
+                            onMouseLeave={() => setHoverLang(false)}
                         >
-                            VN
-                        </button>
+                            <motion.button
+                                whileHover={{ scale: 1.1, rotate: 3 }}
+                                whileTap={{ scale: 0.95 }}
+                                className={`flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 border ${borderColor} rounded-full overflow-hidden transition-all duration-300`}
+                            >
+                                <img
+                                    src={`/icons/flags/${
+                                        languages.find((l) => l.code === language)?.flag || "vn"
+                                    }.svg`}
+                                    alt={language}
+                                    className="w-full h-full object-cover"
+                                />
+                            </motion.button>
+                            <AnimatePresence>
+                                {hoverLang && (
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.8, y: -10 }}
+                                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                                        exit={{ opacity: 0, scale: 0.8, y: -10 }}
+                                        transition={{
+                                            type: "spring",
+                                            stiffness: 500,
+                                            damping: 30,
+                                        }}
+                                        className="absolute right-0 mt-2 bg-white shadow-xl rounded-xl py-2 w-36 z-50"
+                                    >
+                                        {languages.map((lang) => (
+                                            <button
+                                                key={lang.code}
+                                                onClick={() => setLanguage(lang.code)}
+                                                className={`flex items-center w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 text-sm ${
+                                                    lang.code === language
+                                                        ? "font-medium text-blue-600"
+                                                        : ""
+                                                }`}
+                                            >
+                                                <img
+                                                    src={`/icons/flags/${lang.flag}.svg`}
+                                                    alt={lang.code}
+                                                    className="w-5 h-5 mr-2"
+                                                />
+                                                {lang.label}
+                                            </button>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
 
-                        {/* User Button */}
-                        <Link
-                            href="#"
-                            className={`flex items-center justify-center w-10 h-10 border ${borderColor} rounded-full bg-gray-50/10 hover:bg-white/20 transition transform hover:scale-110`}
-                        >
-                            <img
-                                src="/icons/user/user_02.svg"
-                                alt="Account"
-                                className="w-5 h-5"
-                                style={{ filter: iconFilter }}
-                            />
-                        </Link>
-
-                        {/* Hamburger Menu (mobile only) */}
+                        <motion.div whileHover={{ scale: 1.15 }}>
+                            <Link
+                                href="#"
+                                className={`flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 border ${borderColor} rounded-full bg-gray-50/10 hover:bg-gradient-to-r hover:from-blue-400/10 hover:to-purple-400/10 transition-all duration-300`}
+                            >
+                                <img
+                                    src="/icons/user/user_02.svg"
+                                    alt="Account"
+                                    className="w-4 h-4 sm:w-5 sm:h-5"
+                                    style={{
+                                        filter: isScrolled
+                                            ? "invert(0%)"
+                                            : variant === "dark"
+                                                ? "invert(100%)"
+                                                : "invert(0%)",
+                                    }}
+                                />
+                            </Link>
+                        </motion.div>
                         <button
                             onClick={() => setMenuOpen(!menuOpen)}
-                            className={`md:hidden flex items-center justify-center w-10 h-10 border ${borderColor} rounded-full bg-gray-50/10 hover:bg-white/20 transition transform hover:scale-110`}
+                            className={`md:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 border ${borderColor} rounded-full transition-all hover:scale-110 duration-300`}
                         >
                             <img
-                                src="/icons/menu/hamburger_md.svg"
+                                src={
+                                    menuOpen
+                                        ? "/icons/menu/close_md.svg"
+                                        : "/icons/menu/hamburger_md.svg"
+                                }
                                 alt="Menu"
-                                className="w-5 h-5"
-                                style={{ filter: iconFilter }}
+                                className="w-4 h-4 sm:w-5 sm:h-5"
+                                style={{ filter: mobileIconColor }}
                             />
                         </button>
                     </div>
                 </nav>
-            </header>
+            </motion.header>
 
-            {/* MENU MOBILE */}
-            <div
-                className={`fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center gap-6 text-center z-[200] transition-all duration-500 ease-in-out ${
-                    menuOpen
-                        ? "opacity-100 visible translate-y-0"
-                        : "opacity-0 invisible -translate-y-8"
-                }`}
-            >
-                {menuItems.map((item) =>
-                    item.subItems ? (
-                        <div key={item.label} className="flex flex-col items-center gap-2">
-                            <span className="text-lg font-semibold text-gray-900">
-                                {item.label}
-                            </span>
-                            {item.subItems.map((sub) => (
-                                <Link
-                                    key={sub.label}
-                                    href={sub.link}
-                                    onClick={() => setMenuOpen(false)}
-                                    className="text-gray-700 text-base hover:text-blue-600 transition-colors"
-                                >
-                                    {sub.label}
-                                </Link>
-                            ))}
-                        </div>
-                    ) : (
-                        <Link
-                            key={item.label}
-                            href={item.link || "#"}
+            <AnimatePresence>
+                {menuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -40 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center text-center z-[200] px-6"
+                    >
+                        {menuItems.map((item) =>
+                                item.subItems ? (
+                                    <div
+                                        key={item.label}
+                                        className="flex flex-col items-center gap-2 mb-4"
+                                    >
+                  <span className="text-lg font-semibold text-gray-900">
+                    {item.label}
+                  </span>
+                                        {item.subItems.map((sub) => (
+                                            <Link
+                                                key={sub.label}
+                                                href={sub.link}
+                                                onClick={() => setMenuOpen(false)}
+                                                className="text-gray-700 text-base hover:text-blue-600 transition-colors"
+                                            >
+                                                {sub.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <Link
+                                        key={item.label}
+                                        href={item.link || "#"}
+                                        onClick={() => setMenuOpen(false)}
+                                        className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors mb-4"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                )
+                        )}
+
+                        <motion.button
+                            whileHover={{ scale: 1.1, rotate: 90 }}
                             onClick={() => setMenuOpen(false)}
-                            className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors"
+                            className="mt-6 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition"
                         >
-                            {item.label}
-                        </Link>
-                    )
+                            <img src="/icons/menu/close_md.svg" alt="Close" className="w-6 h-6" />
+                        </motion.button>
+                    </motion.div>
                 )}
-
-                {/* Nút đóng menu */}
-                <button
-                    onClick={() => setMenuOpen(false)}
-                    className="mt-10 flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition"
-                >
-                    <img
-                        src="/icons/menu/close_md.svg"
-                        alt="Close"
-                        className="w-6 h-6"
-                    />
-                </button>
-            </div>
+            </AnimatePresence>
         </>
     );
 };

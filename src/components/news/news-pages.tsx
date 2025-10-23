@@ -8,7 +8,7 @@ const newsDetail = {
     title: "5 tỉnh thành có nhiều khu công nghiệp nhất Việt Nam",
     author: "Vũ Công Lập",
     date: "29/02/2024 08:33",
-    image: "/images/factory-wide.png",
+    image: "/images/factory-wide.jpg",
     content: [
         {
             subtitle: "Những con số đáng suy nghĩ",
@@ -19,13 +19,13 @@ const newsDetail = {
             text: "Các địa phương có nhiều khu công nghiệp nhất cả nước chủ yếu tập trung ở phía Nam Việt Nam.",
         },
     ],
-    images: ["/images/factory-wide.png", "/images/factory2.png"],
+    images: ["/images/factory-wide.jpg", "/images/factory2.jpg"],
     related: [
-        { title: "Cơ hội đầu tư vào các khu công nghiệp tại Hà Nội", img: "/images/news1.png" },
-        { title: "Phát triển bền vững - Xu hướng của KCN hiện đại", img: "/images/news2.png" },
-        { title: "Khu công nghiệp thông minh tại TP.HCM", img: "/images/news3.png" },
-        { title: "Hạ tầng giao thông kết nối thuận lợi", img: "/images/news4.png" },
-        { title: "Chính sách ưu đãi đầu tư mới nhất", img: "/images/news5.png" },
+        { title: "Cơ hội đầu tư vào các khu công nghiệp tại Hà Nội", img: "/images/news1.jpg" },
+        { title: "Phát triển bền vững - Xu hướng của KCN hiện đại", img: "/images/news2.jpg" },
+        { title: "Khu công nghiệp thông minh tại TP.HCM", img: "/images/news3.jpg" },
+        { title: "Hạ tầng giao thông kết nối thuận lợi", img: "/images/news4.jpg" },
+        { title: "Chính sách ưu đãi đầu tư mới nhất", img: "/images/news5.jpg" },
     ],
 };
 
@@ -35,13 +35,13 @@ const comments = [
         name: "Nguyễn Văn A",
         time: "2 giờ trước",
         content: "Bài viết rất hữu ích và chi tiết!",
-        avatar: "/images/avatar1.png",
+        avatar: "/images/avatar1.jpg",
     },
     {
         name: "Trần Thị B",
         time: "5 giờ trước",
         content: "Cám ơn thông tin, rất chi tiết!",
-        avatar: "/images/avatar2.png",
+        avatar: "/images/avatar2.jpg",
     },
 ];
 
@@ -51,7 +51,7 @@ const NewsDetailPage: React.FC = () => {
             {/* Hero Banner */}
             <div
                 className="relative bg-cover bg-center h-64"
-                style={{ backgroundImage: `url('/images/img3.png')` }}
+                style={{ backgroundImage: `url('/images/img3.jpg')` }}
             >
                 <div className="absolute inset-0 bg-black/50"></div>
                 <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4">

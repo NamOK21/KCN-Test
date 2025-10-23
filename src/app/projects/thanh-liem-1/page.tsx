@@ -19,7 +19,8 @@ export default function Page() {
             <ThanhLiemI showDetails={showDetails} setShowDetails={setShowDetails} />
 
             {/* Tabs thông tin dự án */}
-            <ProjectTabs />
+            <ProjectTabs/>
+
 
             {/* Chi tiết phân lô (hiện khi bấm nút) */}
             <LotDetails show={showDetails} />

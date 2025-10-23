@@ -96,7 +96,7 @@ const PlanningMapTab: React.FC = () => {
                     className="relative w-full pb-[48.7%] rounded-[24px]"
                 >
                     <Image
-                        src="/images/quyhoach.png"
+                        src="/images/quyhoach.jpg"
                         alt="Bản đồ khu công nghiệp"
                         fill
                         className="object-cover object-center"

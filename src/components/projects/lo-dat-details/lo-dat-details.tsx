@@ -98,7 +98,7 @@ export default function LoDatDetail({ id }: { id: string }) {
             {/* Ảnh chính sau thông tin chi tiết */}
             <div className="mb-16">
                 <Image
-                    src="/images/kim-bang-iv-demo.png"
+                    src="/images/kim-bang-iv-demo.jpg"
                     alt={`Lô đất ${id}`}
                     width={1920}
                     height={795}
@@ -112,7 +112,7 @@ export default function LoDatDetail({ id }: { id: string }) {
             <section className="mb-16">
                 <h2 className="text-xl font-semibold mb-5 text-gray-900">Hình ảnh & Video</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {["img1.png", "img2.png", "img3.png"].map((img, i) => (
+                    {["img1.jpg", "img2.jpg", "img3.jpg"].map((img, i) => (
                         <div key={i} className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
                             <Image
                                 src={`/images/${img}`}

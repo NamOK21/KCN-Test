@@ -13,7 +13,7 @@ import { MdSchedule } from "react-icons/md";
 const latestNews = {
     title: "Ưu đãi vượt trội, thu hút doanh nghiệp phát triển bền vững",
     link: "/news-pages/hanam",
-    image: "/images/factory-wide.png",
+    image: "/images/factory-wide.jpg",
     date: "2025-03-28T08:00:00",
     description:
         "Trường ĐH FPT vừa tổ chức hội nghị ACBSP khu vực 10, quy tụ hơn 300 chuyên gia, giảng viên, nghiên cứu viên... đến từ Mỹ, châu Âu, khu vực Nam Á, Đông Nam Á và nhiều ĐH ở Việt Nam.",
@@ -22,17 +22,17 @@ const latestNews = {
 };
 
 const relatedNews = [
-    { img: "/images/news1.png", title: "Khánh thành nhà máy mới tại KCN Kim Bình", link: "/news/kim-binh", date: "2025-10-10T09:00:00" },
-    { img: "/images/news2.png", title: "Hạ tầng giao thông kết nối thuận lợi", link: "/news/giao-thong", date: "2025-10-10T07:00:00" },
-    { img: "/images/news3.png", title: "Tiềm năng thu hút đầu tư FDI 2025", link: "/news/fdi-2025", date: "2025-10-09T12:00:00" },
-    { img: "/images/news1.png", title: "KCN Thanh Niêm 4 – điểm sáng mới", link: "/news/thanh-niem-4", date: "2025-10-08T08:00:00" },
-    { img: "/images/news2.png", title: "Hà Nam hướng đến trung tâm công nghiệp phía Bắc", link: "/news/ha-nam", date: "2025-10-07T10:00:00" },
+    { img: "/images/news1.jpg", title: "Khánh thành nhà máy mới tại KCN Kim Bình", link: "/news/kim-binh", date: "2025-10-10T09:00:00" },
+    { img: "/images/news2.jpg", title: "Hạ tầng giao thông kết nối thuận lợi", link: "/news/giao-thong", date: "2025-10-10T07:00:00" },
+    { img: "/images/news3.jpg", title: "Tiềm năng thu hút đầu tư FDI 2025", link: "/news/fdi-2025", date: "2025-10-09T12:00:00" },
+    { img: "/images/news1.jpg", title: "KCN Thanh Niêm 4 – điểm sáng mới", link: "/news/thanh-niem-4", date: "2025-10-08T08:00:00" },
+    { img: "/images/news2.jpg", title: "Hà Nam hướng đến trung tâm công nghiệp phía Bắc", link: "/news/ha-nam", date: "2025-10-07T10:00:00" },
 ];
 
 const allNews = [
-    { img: "/images/img1.png", title: "Khởi công nhà máy linh kiện điện tử tại Hà Nam", desc: "KCN Kim Bảng IV thu hút thêm dự án sản xuất linh kiện cao cấp, tạo 2.000 việc làm.", date: "2025-10-08T10:00:00", likes: 10, comments: 2, link: "/news/nha-may-linh-kien" },
-    { img: "/images/img2.png", title: "Đầu tư mở rộng hạ tầng công nghiệp tại miền Bắc", desc: "Hệ thống giao thông và logistic được đồng bộ giúp thu hút dòng vốn FDI mạnh mẽ.", date: "2025-10-05T14:00:00", likes: 7, comments: 1, link: "/news/mo-rong-ha-tang" },
-    { img: "/images/img3.png", title: "Phát triển bền vững tại các khu công nghiệp thế hệ mới", desc: "Các khu công nghiệp xanh giúp cân bằng phát triển và môi trường, thu hút nhà đầu tư lớn.", date: "2025-10-02T09:00:00", likes: 5, comments: 0, link: "/news/phat-trien-ben-vung" },
+    { img: "/images/img1.jpg", title: "Khởi công nhà máy linh kiện điện tử tại Hà Nam", desc: "KCN Kim Bảng IV thu hút thêm dự án sản xuất linh kiện cao cấp, tạo 2.000 việc làm.", date: "2025-10-08T10:00:00", likes: 10, comments: 2, link: "/news/nha-may-linh-kien" },
+    { img: "/images/img2.jpg", title: "Đầu tư mở rộng hạ tầng công nghiệp tại miền Bắc", desc: "Hệ thống giao thông và logistic được đồng bộ giúp thu hút dòng vốn FDI mạnh mẽ.", date: "2025-10-05T14:00:00", likes: 7, comments: 1, link: "/news/mo-rong-ha-tang" },
+    { img: "/images/img3.jpg", title: "Phát triển bền vững tại các khu công nghiệp thế hệ mới", desc: "Các khu công nghiệp xanh giúp cân bằng phát triển và môi trường, thu hút nhà đầu tư lớn.", date: "2025-10-02T09:00:00", likes: 5, comments: 0, link: "/news/phat-trien-ben-vung" },
 ];
 
 // ===== COMPONENT TIME =====
@@ -127,7 +127,7 @@ export default function NewsPage() {
                 title="Dự án khu công nghiệp Kim Bảng IV"
                 homepage="Trang chủ"
                 currentPage="Tin tức sự kiện"
-                bgImage="/images/img3.png"
+                bgImage="/images/img3.jpg"
             />
 
             <section className="bg-white py-12 px-4 md:px-8">

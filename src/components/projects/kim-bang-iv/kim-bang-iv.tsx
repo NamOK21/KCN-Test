@@ -29,7 +29,7 @@ const KimBangIv: React.FC<KimBangIvProps> = ({ showDetails, setShowDetails }) =>
     const DESCRIPTION_3 =
         "Thời hạn hoạt động 50 năm, tổng vốn hạ tầng dự kiến ~2.465 tỷ đồng, mục tiêu hoàn thiện trong 36 tháng kể từ bàn giao đất...";
 
-    const IMAGES = ["/images/img1.png", "/images/img2.png", "/images/img3.png"];
+    const IMAGES = ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"];
 
     return (
         <>

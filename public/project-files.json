@@ -3,39 +3,130 @@
     {
       "name": "2025.05.13   QĐ 901   QĐ thành lập cụm",
       "type": "PDF",
-      "url": "/files/thanhliem1/legal/2025.05.13 - QĐ 901 - QĐ thành lập cụm.pdf"
+      "url": "/files/thanhliem1/legal/2025.05.13 - QĐ 901 - QĐ thành lập cụm.pdf",
+      "issuedDate": "13/05/2025",
+      "authority": "UBND tỉnh Hà Nam",
+      "tagMain": "Thành lập cụm công nghiệp",
+      "tags": {
+        "type": "Quyết định",
+        "location": "Hà Nam",
+        "status": "Còn hiệu lực",
+        "category": "Quy hoạch"
+      }
     },
     {
       "name": "2025.06.20   QĐ 3667   TL   QĐ phê duyệt QH 1.500",
       "type": "PDF",
-      "url": "/files/thanhliem1/legal/2025.06.20 - QĐ 3667 - TL - QĐ phê duyệt QH 1.500.pdf"
+      "url": "/files/thanhliem1/legal/2025.06.20 - QĐ 3667 - TL - QĐ phê duyệt QH 1.500.pdf",
+      "issuedDate": "20/06/2025",
+      "authority": "UBND tỉnh Hà Nam",
+      "tagMain": "Phê duyệt quy hoạch 1/500",
+      "tags": {
+        "type": "Quyết định",
+        "location": "Hà Nam",
+        "status": "Còn hiệu lực",
+        "category": "Quy hoạch"
+      }
     },
     {
       "name": "2025.06.20   QĐ 3667   TL   QĐ quản lý",
       "type": "PDF",
-      "url": "/files/thanhliem1/legal/2025.06.20 - QĐ 3667 - TL - QĐ quản lý.pdf"
+      "url": "/files/thanhliem1/legal/2025.06.20 - QĐ 3667 - TL - QĐ quản lý.pdf",
+      "issuedDate": "20/06/2025",
+      "authority": "UBND tỉnh Hà Nam",
+      "tagMain": "Quy định quản lý cụm công nghiệp",
+      "tags": {
+        "type": "Quyết định",
+        "location": "Hà Nam",
+        "status": "Hết hiệu lực",
+        "category": "Quản lý"
+      }
     },
     {
       "name": "2025.06.23   QĐ 1468   UB tỉnh   QĐ chấp thuận chủ trương đầu tư",
       "type": "PDF",
-      "url": "/files/thanhliem1/legal/2025.06.23 - QĐ 1468 - UB tỉnh - QĐ chấp thuận chủ trương đầu tư.pdf"
+      "url": "/files/thanhliem1/legal/2025.06.23 - QĐ 1468 - UB tỉnh - QĐ chấp thuận chủ trương đầu tư.pdf",
+      "issuedDate": "23/06/2025",
+      "authority": "UBND tỉnh Hà Nam",
+      "tagMain": "Chấp thuận chủ trương đầu tư",
+      "tags": {
+        "type": "Quyết định",
+        "location": "Hà Nam",
+        "status": "Đã khoá",
+        "category": "Đầu tư"
+      }
     },
     {
-      "name": "2025.09.26 GCNĐKĐT CỤm Công nghiệp Thanh Liêm 1",
+      "name": "2025.09.26 GCNĐKĐT Cụm Công nghiệp Thanh Liêm 1",
       "type": "PDF",
-      "url": "/files/thanhliem1/legal/2025.09.26 GCNĐKĐT CỤm Công nghiệp Thanh Liêm 1.pdf"
+      "url": "/files/thanhliem1/legal/2025.09.26 GCNĐKĐT CỤm Công nghiệp Thanh Liêm 1.pdf",
+      "issuedDate": "26/09/2025",
+      "authority": "Sở Kế hoạch và Đầu tư Hà Nam",
+      "tagMain": "Giấy chứng nhận đăng ký đầu tư",
+      "tags": {
+        "type": "Giấy chứng nhận",
+        "location": "Hà Nam",
+        "status": "Còn hiệu lực",
+        "category": "Đầu tư"
+      }
     }
   ],
   "documents": [
     {
       "name": "QH01   VT",
       "type": "PDF",
-      "url": "/files/thanhliem1/documents/QH01 - VT.pdf"
+      "url": "/files/thanhliem1/documents/QH01 - VT.pdf",
+      "issuedDate": "10/06/2025",
+      "authority": "Ban Quản lý Dự án Thanh Liêm 1",
+      "tagMain": "Bản vẽ vị trí quy hoạch",
+      "tags": {
+        "type": "Bản vẽ",
+        "location": "Hà Nam",
+        "status": "Đã khoá",
+        "category": "Quy hoạch"
+      }
     },
     {
       "name": "QH03   SDĐ",
       "type": "PDF",
-      "url": "/files/thanhliem1/documents/QH03 - SDĐ.pdf"
+      "url": "/files/thanhliem1/documents/QH03 - SDĐ.pdf",
+      "issuedDate": "10/06/2025",
+      "authority": "Ban Quản lý Dự án Thanh Liêm 1",
+      "tagMain": "Sơ đồ sử dụng đất",
+      "tags": {
+        "type": "Bản vẽ",
+        "location": "Hà Nam",
+        "status": "Còn hiệu lực",
+        "category": "Sử dụng đất"
+      }
+    },
+    {
+      "name": "QH04   KTCQ",
+      "type": "PDF",
+      "url": "/files/thanhliem1/documents/QH04 - KTCQ.pdf",
+      "issuedDate": "10/06/2025",
+      "authority": "Ban Quản lý Dự án Thanh Liêm 1",
+      "tagMain": "Bản vẽ kiến trúc cảnh quan",
+      "tags": {
+        "type": "Bản vẽ",
+        "location": "Hà Nam",
+        "status": "Còn hiệu lực",
+        "category": "Hạ tầng"
+      }
+    },
+    {
+      "name": "QH12   định hướng kiểm soát KTCQ",
+      "type": "PDF",
+      "url": "/files/thanhliem1/documents/QH12 - định hướng kiểm soát KTCQ.pdf",
+      "issuedDate": "10/06/2025",
+      "authority": "Ban Quản lý Dự án Thanh Liêm 1",
+      "tagMain": "Định hướng kiểm soát kiến trúc",
+      "tags": {
+        "type": "Tài liệu hướng dẫn",
+        "location": "Hà Nam",
+        "status": "Đã khoá",
+        "category": "Kiến trúc"
+      }
     }
   ]
 }

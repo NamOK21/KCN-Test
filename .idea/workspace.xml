@@ -5,26 +5,155 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7460ec29-b168-4f30-8722-41d1bfdccb03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/documents/QH01 - VT.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/documents/QH03 - SDĐ.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.05.13 - QĐ 901 - QĐ thành lập cụm.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.06.20 - QĐ 3667 - TL - QĐ phê duyệt QH 1.500.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.06.20 - QĐ 3667 - TL - QĐ quản lý.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.06.23 - QĐ 1468 - UB tỉnh - QĐ chấp thuận chủ trương đầu tư.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/legal/2025.09.26 GCNĐKĐT CỤm Công nghiệp Thanh Liêm 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/thanhliem1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/thanhliem2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/thanhliem3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/generate-files-json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/documents/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/project-files/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/projects/thanh-liem-1/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/projects/project tabs/ProjectDocuments.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/projects/thanh-liem-1/thanh-liem-1.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/convert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/kimbangiv/documents/QH09 - Kiểm soát không gian KTCQ.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/documents/QH04 - KTCQ.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/files/thanhliem1/documents/QH12 - định hướng kiểm soát KTCQ.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/highlight/hospital.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/highlight/paper.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/highlight/plane.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/highlight/port.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/highlight/school.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/559.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/563.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/564.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/565.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/KB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/KB4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/TN4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/TN5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/account-light.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/account.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/call-light.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/call.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/chungcu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/client.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/div.type-icon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/electric.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/facebook.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/factory-square.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/factory-wide.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hatang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/insta.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/khucongnghiep.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/kim-bang-iv-demo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo-white.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/news1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/news2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/news3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/phaply1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/phaply2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/phaply3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/phaply4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/quyhoach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/search.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/telecom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thanhliem1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thanhliem2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thanhliem3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thanhliem4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thanhliem5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thanhliem6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/tiemnang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/toanha.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/twitter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/vitri.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/water.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/why1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/why2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/why3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/youtube.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/gioi-thieu/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/uu-dai/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/introduction/introduction.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/introduction/project-intro.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/phaply-uudai/DocumentList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/phaply-uudai/PageLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/phaply-uudai/Sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/phaply-uudai/phap-ly/phaply.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/phaply-uudai/uu-dai/uudai.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/559.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/563.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/564.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/565.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/KB.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/thanh-niem-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/KB4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/TN4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/TN5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/account-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/account.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/call-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/call.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/chungcu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/client.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/div.type-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/electric.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/factory-square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/factory-wide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/hatang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/img3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/insta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/khucongnghiep.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/kim-bang-iv-demo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/kim-bang.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/kim-bang.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/kim-bang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/news1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/news2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/news3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/phaply1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/phaply2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/phaply3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/phaply4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/quyhoach.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/telecom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/thanhliem1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/thanhliem2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/thanhliem3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tiemnang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/toanha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/vitri.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/water.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/why1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/why2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/why3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/youtube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/project-files.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/project-files.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/phap-ly/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/phap-ly/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/projects/thanh-liem-1/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/thanh-liem-1/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homepage/homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homepage/homepage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/news/news-pages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news/news-pages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/news/news.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/news/news.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/phap-ly/phap-ly.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/kim-bang-iv/kim-bang-iv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/kim-bang-iv/kim-bang-iv.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/lo-dat-details/lo-dat-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/lo-dat-details/lo-dat-details.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/DocumentsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/DocumentsSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/OverviewTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/OverviewTab.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/PlanningMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/PlanningMap.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/PolicyTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/PolicyTab.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/thanh-liem-1/thanh-liem-1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/thanh-liem-1/thanh-liem-1.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/public/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/promotion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/promotion.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,25 +172,36 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/generate-files-json.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/convert.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/next.config.ts" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/public/project-files.json" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/scripts/generate-files-json.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/api/documents/route.ts" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/api/project-files/route.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/app/gioi-thieu/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/layout.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/lo-dat/[id]/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/news-pages/hanam/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/phap-ly/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/projects/kim-bang-iv/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/projects/thanh-liem-1/page.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/app/uu-dai/page.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/homepage/homepage.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/introduction/introduction.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/introduction/project-intro.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/news/news-pages.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/news/news.tsx" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/components/phap-ly/phap-ly.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/phaply-uudai/DocumentList.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/phaply-uudai/PageLayout.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/phaply-uudai/Sidebar.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/phaply-uudai/phap-ly/phaply.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/phaply-uudai/uu-dai/uudai.ts" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/kim-bang-iv/kim-bang-iv.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/lo-dat-details/lo-dat-details.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/lotdetails.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/DocumentsSection.tsx" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/OverviewTab.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/PlanningMap.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/PolicyTab.tsx" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/components/projects/project tabs/ProjectDocuments.tsx" root0="SKIP_INSPECTION" />
@@ -90,7 +230,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/thieutanam/Codes/KCN-Test/public/icons/others&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/thieutanam/Codes/KCN-Test/src/app/uu-dai&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -102,15 +242,17 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\thieutanam\Codes\KCN-Test\src\app\uu-dai" />
+      <recent name="D:\thieutanam\Codes\KCN-Test\public" />
       <recent name="D:\thieutanam\Codes\KCN-Test\public\icons\others" />
       <recent name="D:\thieutanam\Codes\KCN-Test\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\thieutanam\Codes\KCN-Test\scripts" />
-      <recent name="D:\thieutanam\Codes\KCN-Test\public\files\thanhliem1\documents" />
-      <recent name="D:\thieutanam\Codes\KCN-Test\public\files\thanhliem1\legal" />
+      <recent name="D:\thieutanam\Codes\KCN-Test\src\components\phaply-uudai" />
+      <recent name="D:\thieutanam\Codes\KCN-Test\src\components" />
       <recent name="D:\thieutanam\Codes\KCN-Test\public\images" />
-      <recent name="D:\thieutanam\Codes\KCN-Test\public\icons" />
+      <recent name="D:\thieutanam\Codes\KCN-Test\public\icons\highlight" />
+      <recent name="D:\thieutanam\Codes\KCN-Test\public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -159,23 +301,27 @@
       <workItem from="1760510486697" duration="13042000" />
       <workItem from="1760542812277" duration="44000" />
       <workItem from="1760542968825" duration="610000" />
-      <workItem from="1760580587006" duration="5605000" />
+      <workItem from="1760580587006" duration="7851000" />
+      <workItem from="1760624663509" duration="1496000" />
+      <workItem from="1760664543752" duration="8617000" />
+      <workItem from="1760688112031" duration="8990000" />
+      <workItem from="1760759012190" duration="1599000" />
+      <workItem from="1760760733930" duration="907000" />
+      <workItem from="1760764537011" duration="2000" />
+      <workItem from="1760766273055" duration="237000" />
+      <workItem from="1760930142229" duration="2103000" />
+      <workItem from="1760944544785" duration="8709000" />
+      <workItem from="1760971702622" duration="593000" />
+      <workItem from="1761011078624" duration="4720000" />
+      <workItem from="1761031286867" duration="8039000" />
+      <workItem from="1761096942555" duration="8883000" />
+      <workItem from="1761118557402" duration="8432000" />
+      <workItem from="1761183604590" duration="9308000" />
+      <workItem from="1761204252941" duration="4787000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/projects/project tabs/project-tabs.tsx</url>
-          <line>75</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

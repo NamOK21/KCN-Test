@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+
 import OverviewTab from "@/components/projects/project tabs/OverviewTab";
 import TechnicalTab from "@/components/projects/project tabs/TechnicalTab";
 import PolicyTab from "@/components/projects/project tabs/PolicyTab";
@@ -9,12 +11,12 @@ import DocumentsSection from "@/components/projects/project tabs/DocumentsSectio
 import PlanningMap from "@/components/projects/project tabs/PlanningMap";
 
 const tabs = [
-    "Tổng quan",
-    "Bản đồ quy hoạch",
-    "Thông số kỹ thuật",
-    "Chính sách & Ưu đãi",
-    "Pháp lý dự án",
-    "Tài liệu",
+    { label: "Tổng quan", icon: "tongquan" },
+    { label: "Bản đồ quy hoạch", icon: "bando" },
+    { label: "Thông số kỹ thuật", icon: "thongsokythuat" },
+    { label: "Chính sách & Ưu đãi", icon: "chinhsach" },
+    { label: "Pháp lý dự án", icon: "phaply" },
+    { label: "Tài liệu dự án", icon: "tailieu" },
 ];
 
 const ProjectTabs: React.FC = () => {
@@ -28,7 +30,7 @@ const ProjectTabs: React.FC = () => {
     const [projectDocs, setProjectDocs] = useState<any[]>([]);
     const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
-    // 🔄 Lấy danh sách file từ JSON tĩnh sinh ra trước
+    // 🔄 Lấy danh sách file JSON
     useEffect(() => {
         const fetchFiles = async () => {
             try {
@@ -43,9 +45,9 @@ const ProjectTabs: React.FC = () => {
         fetchFiles();
     }, []);
 
-    // Gạch chân tab đang chọn
+    // 📏 Gạch chân tab động
     useEffect(() => {
-        const index = tabs.indexOf(activeTab);
+        const index = tabs.findIndex((t) => t.label === activeTab);
         const el = tabRefs.current[index];
         if (el) {
             setUnderlineProps({
@@ -56,52 +58,75 @@ const ProjectTabs: React.FC = () => {
     }, [activeTab]);
 
     return (
-        <div className="bg-gray-50 pt-10 pb-20">
+        <div className="bg-gray-50 pt-10 pb-20 flex flex-col items-center w-full">
             {/* --- Tabs header --- */}
-            <div className="border-b border-gray-200 relative">
-                <div className="max-w-[1110px] mx-auto flex flex-wrap gap-6 px-4 md:px-10 text-gray-700 font-medium relative">
-                    {tabs.map((tab, index) => (
-                        <button
-                            key={tab}
-                            ref={(el) => {
-                                if (el) tabRefs.current[index] = el;
-                            }}
+            <div className="relative w-full flex flex-col items-center">
+                {/* Giới hạn chiều rộng chỉ cho phần thanh tab */}
+                <div className="max-w-[1110px] w-full flex justify-between px-3 sm:px-6 md:px-10 text-gray-700 font-medium relative gap-[2px]">
+                    {tabs.map((tab, index) => {
+                        const isActive = activeTab === tab.label;
+                        const iconPath = isActive
+                            ? `/icons/custom/colored/${tab.icon}.svg`
+                            : `/icons/custom/${tab.icon}.svg`;
 
-                            onClick={() => setActiveTab(tab)}
-                            className={`relative pb-3 transition-colors ${
-                                activeTab === tab
-                                    ? "text-blue-700 font-semibold"
-                                    : "text-gray-500 hover:text-blue-700"
-                            }`}
-                        >
-                            {tab}
-                        </button>
-                    ))}
-
-                    <motion.div
-                        layout
-                        transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                        className="absolute bottom-0 h-[2px] bg-blue-700"
-                        style={{
-                            left: underlineProps.left,
-                            width: underlineProps.width,
-                        }}
-                    />
+                        return (
+                            <button
+                                key={tab.label}
+                                ref={(el) => (tabRefs.current[index] = el)}
+                                onClick={() => setActiveTab(tab.label)}
+                                className={`group flex flex-col items-center justify-center flex-1 py-3 sm:py-4 rounded-t-xl transition-all duration-300 ease-in-out ${
+                                    isActive
+                                        ? "bg-[#0056A6] text-white shadow-md"
+                                        : "bg-white text-gray-700 hover:text-[#0056A6] hover:bg-[#E6F0FA]"
+                                }`}
+                            >
+                                <motion.div
+                                    whileHover={!isActive ? { scale: 1.05 } : {}}
+                                    animate={isActive ? { scale: 1.1 } : { scale: 1 }}
+                                    transition={{ duration: 0.25 }}
+                                >
+                                    <Image
+                                        src={iconPath}
+                                        alt={tab.label}
+                                        width={26}
+                                        height={26}
+                                        className="mb-2 transition-transform duration-300"
+                                    />
+                                </motion.div>
+                                <span className="text-[13px] sm:text-sm font-semibold text-center">
+                                    {tab.label}
+                                </span>
+                            </button>
+                        );
+                    })}
                 </div>
+
+                {/* --- Đường kẻ ngang --- */}
+                <div className="max-w-[1110px] w-full h-[2px] bg-[#0056A6]/30 mt-0 mx-auto rounded-full" />
             </div>
 
             {/* --- Nội dung --- */}
-            <div className="max-w-[1110px] mx-auto px-4 md:px-10 mt-12">
-                {activeTab === "Tổng quan" && <OverviewTab />}
-                {activeTab === "Bản đồ quy hoạch" && <PlanningMap />}
-                {activeTab === "Thông số kỹ thuật" && <TechnicalTab />}
-                {activeTab === "Chính sách & Ưu đãi" && <PolicyTab />}
-                {activeTab === "Pháp lý dự án" && (
-                    <DocumentsSection title="Pháp lý dự án" mode="legal" items={legalDocs} />
-                )}
-                {activeTab === "Tài liệu" && (
-                    <DocumentsSection title="Tài liệu dự án" mode="document" items={projectDocs} />
-                )}
+            <div className="w-full mt-10">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={activeTab}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                    >
+                        {activeTab === "Tổng quan" && <OverviewTab />}
+                        {activeTab === "Bản đồ quy hoạch" && <PlanningMap />}
+                        {activeTab === "Thông số kỹ thuật" && <TechnicalTab />}
+                        {activeTab === "Chính sách & Ưu đãi" && <PolicyTab />}
+                        {activeTab === "Pháp lý dự án" && (
+                            <DocumentsSection title="Pháp lý dự án" mode="legal" items={legalDocs} />
+                        )}
+                        {activeTab === "Tài liệu dự án" && (
+                            <DocumentsSection title="Tài liệu dự án" mode="document" items={projectDocs} />
+                        )}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </div>
     );

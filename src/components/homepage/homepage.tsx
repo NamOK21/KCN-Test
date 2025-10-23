@@ -25,23 +25,23 @@ const Homepage: React.FC = () => {
     ];
 
     const projects = [
-        { img: "KB4.png", name: "KCN Kim Bảng IV", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "/projects/kim-bang-iv" },
-        { img: "KB.png", name: "KCN Kim Bình", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
-        { img: "TN4.png", name: "KCN Thanh niêm 1", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
-        { img: "TN4.png", name: "KCN Thanh niêm 4", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
-        { img: "TN5.png", name: "KCN Thanh niêm 5", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
+        { img: "KB4.jpg", name: "KCN Kim Bảng IV", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "/projects/kim-bang-iv" },
+        { img: "KB.jpg", name: "KCN Kim Bình", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
+        { img: "TN4.jpg", name: "KCN Thanh Liêm 1", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "/projects/thanh-liem-1" },
+        { img: "TN4.jpg", name: "KCN Thanh Liêm 4", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
+        { img: "TN5.jpg", name: "KCN Thanh Liêm 5", area: "~295,21 ha", cost: "2.465 tỷ đồng", duration: "50 năm", link: "#" },
     ];
 
     const features = [
-        { img: "vitri.png", title: "Vị trí chiến lược", desc: "Kết nối trực tiếp cao tốc & vành đai, đi Hà Nội–Hải Phòng nhanh." },
-        { img: "hatang.png", title: "Hạ tầng đồng bộ", desc: "Điện–nước–viễn thông đạt chuẩn; trạm XLNT tập trung, hồ điều hòa." },
-        { img: "tiemnang.png", title: "Tiềm năng sinh lời cao", desc: "Ưu đãi thuế & tiền thuê đất; tỷ lệ lấp đầy dự báo tăng ổn định." },
+        { img: "vitri.jpg", title: "Vị trí chiến lược", desc: "Kết nối trực tiếp cao tốc & vành đai, đi Hà Nội–Hải Phòng nhanh." },
+        { img: "hatang.jpg", title: "Hạ tầng đồng bộ", desc: "Điện–nước–viễn thông đạt chuẩn; trạm XLNT tập trung, hồ điều hòa." },
+        { img: "tiemnang.jpg", title: "Tiềm năng sinh lời cao", desc: "Ưu đãi thuế & tiền thuê đất; tỷ lệ lấp đầy dự báo tăng ổn định." },
     ];
 
     const whyChoose = [
-        { img: "why1.png", title: "Vị trí chiến lược", desc: "Gần cao tốc Cầu Giẽ–Ninh Bình & Vành đai 5, kết nối logistics miền Bắc." },
-        { img: "why2.png", title: "Quy hoạch hiện đại", desc: "Mặt bằng ô bàn cờ, quỹ đất linh hoạt theo nhu cầu từ 0.5–20ha." },
-        { img: "why3.png", title: "Hạ tầng kỹ thuật mạnh", desc: "Nguồn điện ổn định, nước công nghiệp, XLNT tập trung, PCCC đồng bộ." },
+        { img: "why1.jpg", title: "Vị trí chiến lược", desc: "Gần cao tốc Cầu Giẽ–Ninh Bình & Vành đai 5, kết nối logistics miền Bắc." },
+        { img: "why2.jpg", title: "Quy hoạch hiện đại", desc: "Mặt bằng ô bàn cờ, quỹ đất linh hoạt theo nhu cầu từ 0.5–20ha." },
+        { img: "why3.jpg", title: "Hạ tầng kỹ thuật mạnh", desc: "Nguồn điện ổn định, nước công nghiệp, XLNT tập trung, PCCC đồng bộ." },
     ];
 
     const infoList = [
@@ -55,14 +55,14 @@ const Homepage: React.FC = () => {
     const slidesData = [
         {
             type: "image",
-            src: "/images/img1.png",
+            src: "/images/img1.jpg",
             tags: ["FOR SALE", "FEATURED"],
             title: "Khu công nghiệp Kim Bảng IV",
             subtitle: "Trên cao tốc Cầu Giẽ - Ninh Bình, gần Vành đai 5 Hà Nội",
             info: ["~295,21 ha", "~16.000–20.000 lao động"],
         },
-        { type: "image", src: "/images/img2.png", title: "Khu công nghiệp hiện đại" },
-        { type: "image", src: "/images/img3.png", title: "Cơ sở hạ tầng" },
+        { type: "image", src: "/images/img2.jpg", title: "Khu công nghiệp hiện đại" },
+        { type: "image", src: "/images/img3.jpg", title: "Cơ sở hạ tầng" },
         {
             type: "card",
             title: "Hệ thống cấp nước hiện đại",
@@ -108,7 +108,7 @@ const Homepage: React.FC = () => {
             {/* HERO */}
             <section className="relative w-full min-h-[80vh] sm:min-h-screen flex items-center justify-center">
                 <div className="absolute inset-0 -z-10">
-                    <Image src="/images/background.png" alt="Hero Background" fill className="object-cover" priority />
+                    <Image src="/images/background.jpg" alt="Hero Background" fill className="object-cover" priority />
                     <div className="absolute inset-0 bg-black/45" />
                 </div>
                 <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
@@ -296,7 +296,7 @@ const Homepage: React.FC = () => {
                         {/* PC view */}
                         <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-4 w-full">
                             <motion.img
-                                src="/images/img1.png"
+                                src="/images/img1.jpg"
                                 alt="Ảnh 1"
                                 className="col-span-2 rounded-lg object-cover w-full h-full shadow-lg"
                                 initial={{ opacity: 0, y: 30 }}
@@ -305,7 +305,7 @@ const Homepage: React.FC = () => {
                                 transition={{ duration: 0.6 }}
                             />
                             <motion.img
-                                src="/images/img2.png"
+                                src="/images/img2.jpg"
                                 alt="Ảnh 2"
                                 className="justify-self-end rounded-lg object-cover w-11/12 h-full shadow-lg"
                                 initial={{ opacity: 0, y: 30 }}
@@ -314,7 +314,7 @@ const Homepage: React.FC = () => {
                                 transition={{ duration: 0.6, delay: 0.2 }}
                             />
                             <motion.img
-                                src="/images/img3.png"
+                                src="/images/img3.jpg"
                                 alt="Ảnh 3"
                                 className="justify-self-end rounded-lg object-cover w-full h-full shadow-lg"
                                 initial={{ opacity: 0, y: 30 }}
@@ -327,7 +327,7 @@ const Homepage: React.FC = () => {
                         {/* Mobile view */}
                         <div className="md:hidden flex justify-center">
                             <motion.img
-                                src="/images/img1.png"
+                                src="/images/img1.jpg"
                                 alt="Ảnh minh họa"
                                 className="rounded-lg object-cover w-full max-w-sm shadow-lg"
                                 initial={{ opacity: 0 }}
@@ -369,7 +369,7 @@ const Homepage: React.FC = () => {
                     >
                         {/* Label */}
                         <div className="flex items-center justify-center w-[180px] h-8 bg-white rounded-full border border-white/20 gap-2 mb-4 shadow-md">
-                            <img src="/images/div.type-icon.png" alt="" className="w-5 h-5 object-contain" />
+                            <img src="/images/div.type-icon.jpg" alt="" className="w-5 h-5 object-contain" />
                             <p className="text-[12px] font-medium text-[#0056A6] m-0">
                                 Bản đồ quy hoạch chi tiết
                             </p>
@@ -460,7 +460,7 @@ const Homepage: React.FC = () => {
                                 whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.2)" }}
                             >
                                 <div>
-                                    <img src={`/images/${type}.png`} alt={type} className="w-full h-40 object-cover rounded-lg" />
+                                    <img src={`/images/${type}.jpg`} alt={type} className="w-full h-40 object-cover rounded-lg" />
                                     <span className="inline-block bg-[#77d1de] text-white mt-2 px-3 py-1 rounded-full text-xs font-medium">
               {type === "electric" ? "Điện" : type === "water" ? "Nước" : "Viễn thông"}
             </span>
@@ -529,7 +529,7 @@ const Homepage: React.FC = () => {
                             transition={{ duration: 0.8 }}
                         >
                             <img
-                                src="/images/img1.png"
+                                src="/images/img1.jpg"
                                 alt="Khu công nghiệp Kim Bảng IV"
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                             />
@@ -574,7 +574,7 @@ const Homepage: React.FC = () => {
                                 transition={{ duration: 0.6 }}
                             >
                                 <img
-                                    src="/images/img2.png"
+                                    src="/images/img2.jpg"
                                     alt="Khu công nghiệp hiện đại"
                                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                                 />
@@ -604,7 +604,7 @@ const Homepage: React.FC = () => {
                                 transition={{ duration: 0.6, delay: 0.1 }}
                             >
                                 <img
-                                    src="/images/img3.png"
+                                    src="/images/img3.jpg"
                                     alt="Cơ sở hạ tầng"
                                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                                 />
@@ -721,7 +721,7 @@ const Homepage: React.FC = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <img
-                            src="/images/client.png"
+                            src="/images/client.jpg"
                             alt="Khách hàng"
                             className="w-full max-w-sm lg:max-w-[320px] h-auto rounded-xl object-cover shadow-xl"
                         />
@@ -800,9 +800,9 @@ const Homepage: React.FC = () => {
 
                     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { img: "/images/news1.png", date: "20/09/2025", category: "Đầu tư", title: "Ưu đãi vượt trội, thu hút doanh nghiệp phát triển bền vững" },
-                            { img: "/images/news2.png", date: "20/09/2025", category: "Sự kiện", title: "Cơ hội hợp tác, chia sẻ và phát triển bền vững" },
-                            { img: "/images/news3.png", date: "20/09/2025", category: "Phát triển", title: "Tiến độ phát triển hạ tầng mới, cập nhật nhanh chóng, hiện đại" },
+                            { img: "/images/news1.jpg", date: "20/09/2025", category: "Đầu tư", title: "Ưu đãi vượt trội, thu hút doanh nghiệp phát triển bền vững" },
+                            { img: "/images/news2.jpg", date: "20/09/2025", category: "Sự kiện", title: "Cơ hội hợp tác, chia sẻ và phát triển bền vững" },
+                            { img: "/images/news3.jpg", date: "20/09/2025", category: "Phát triển", title: "Tiến độ phát triển hạ tầng mới, cập nhật nhanh chóng, hiện đại" },
                         ].map((n, idx) => (
                             <motion.div
                                 key={idx}

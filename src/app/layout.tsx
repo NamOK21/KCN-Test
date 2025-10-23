@@ -4,7 +4,7 @@ import Promotion from "@/components/public/promotion";
 
 export const metadata = {
     title: "KCN Ninh Binh",
-    description: "Nein",
+    description: "Frontend cho website KCN Ninh Binh",
 };
 
 // import Roboto
